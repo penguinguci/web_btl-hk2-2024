@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundS - Thông tin thanh toán</title>
+    <link rel="icon" type="image/png" href="../images/logo_icon.png">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../css/thongtinthanhtoan.css">
+    <script src="../js/main.js"></script>
+    <script src="../js/timkiemsanpham.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg sticky" style="background-color: #d70018;">
+                <a class="navbar-brand col-md-2" href="../html/index.html">
+                    <img style="float:right;margin-right: 30px;" class="img-fluid" src="../images/logo.png" alt="logo" width="120" height="50">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: -35px;">
+                    <ul class="navbar-nav me-auto mb-lg-0">
+                        <li class="danhMuc nav-item dropdown">
+                            <button class="btn btn-danger dropdown-toggle me-2 mt-1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img class="img" src="../images/danhmuc.png" alt="danhmuc" width="30">
+                                    <p style="display: inline; color:white">Danh mục</p>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li class="dropend">
+                                    <a class="dropdown-item" href="../html/tainghe.html">
+                                        <img src="../images/icon-tainghe-220.svg" alt="" width="20"> Tai nghe</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../html/loa.html">
+                                        <img src="../images/Speaker-2-icon.png" alt="" width="20"> Loa
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../html/micthuam.html">
+                                        <img src="../images/Microphone-4-icon.png" alt="" width="20"> Mic thu âm </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../html/mickaraoke.html">
+                                        <img src="../images/Microphone-6-icon.png" alt="" width="20"> Mic Karaoke</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="xemGiaTai nav-item dropdown">
+                            <button class="btn btn-danger dropdown-toggle me-2 mt-1" type="button" data-bs-toggle="modal" data-bs-target="#xemGiaTai">
+                                <img  class="img" src="../images/vitri.png" alt="location"  width="30">
+                                <p style="display: inline; color:white">Xem giá tại</p>
+                            </button>
+                            <div class="modal fade" id="xemGiaTai" tabindex="-1" aria-labelledby="ModalXemGia" aria-hidden="true">
+                                <div class="modal-dialog modalXemGia">
+                                    <div class="modal-content">
+                                        <div class="modal-header" style="background-color: #d70018;">
+                                            <div class="input-group">
+                                                <div class="input-group-text" style="border: none;">
+                                                    <img class="img" src="../images/timkiem.png" alt="" width="15">
+                                                </div>
+                                                <input style="border: none;" class="form-control" type="search" name="search" id="search" placeholder="Nhập tên tỉnh thành">
+                                            </div>
+                                            <button style="background-color: #d70018; border: none; color:white; font-weight: bold; font-size: 18px;" class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">Đóng&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body modalXemGia">
+                                            <p style="font-size: 16px;" class="menu-label">Vui lòng chọn tỉnh, thành phố để biết chính xác giá, khuyến mãi và tồn kho</p>
+                                            <div class="row">
+                                                <div class="col-6 form-check">
+                                                    <ul class="menu-list">
+                                                        <li><a class="nav-link" href="#">Hồ Chí Minh</a></li>
+                                                        <li><a class="nav-link" href="#">An Giang</a></li>
+                                                        <li><a class="nav-link" href="#">Bắc Giang</a></li>
+                                                        <li><a class="nav-link" href="#">Bến Tre</a></li>
+                                                        <li><a class="nav-link" href="#">Bình Thuận</a></li>
+                                                        <li><a class="nav-link" href="#">Cần Thơ</a></li>
+                                                        <li><a class="nav-link" href="#">Đắk Lắk</a></li>
+                                                        <li><a class="nav-link" href="#">Đồng Tháp</a></li>
+                                                        <li><a class="nav-link" href="#">Hải Phòng</a></li>
+                                                        <li><a class="nav-link" href="#">Lâm Đồng</a></li>
+                                                        <li><a class="nav-link" href="#">Nghệ An</a></li>
+                                                        <li><a class="nav-link" href="#">Quảng Bình</a></li>
+                                                        <li><a class="nav-link" href="#">Sóc Trăng</a></li>
+                                                        <li><a class="nav-link" href="#">Thái Nguyên</a></li>
+                                                        <li><a class="nav-link" href="#">Thừa Thiên - Huế</a></li>
+                                                        <li><a class="nav-link" href="#">Trà Vinh</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-6 form-check">
+                                                    <ul class="menu-list">
+                                                        <li><a class="nav-link" href="#">Hà Nội</a></li>
+                                                        <li><a class="nav-link" href="#">Bà Rịa - Vũng Tàu</a></li>
+                                                        <li><a class="nav-link" href="#">Bắc Ninh</a></li>
+                                                        <li><a class="nav-link" href="#">Bình Dương</a></li>
+                                                        <li><a class="nav-link" href="#">Đà Nẵng</a></li>
+                                                        <li><a class="nav-link" href="#">Đồng Nai</a></li>
+                                                        <li><a class="nav-link" href="#">Hải Dương</a></li>
+                                                        <li><a class="nav-link" href="#">Kiên Giang</a></li>
+                                                        <li><a class="nav-link" href="#">Long An</a></li>
+                                                        <li><a class="nav-link" href="#">Phú Thọ</a></li>
+                                                        <li><a class="nav-link" href="#">Quảng Ninh</a></li>
+                                                        <li><a class="nav-link" href="#">Tây Ninh</a></li>
+                                                        <li><a class="nav-link" href="#">Thanh Hóa</a></li>
+                                                        <li><a class="nav-link" href="#">Tiền Giang</a></li>
+                                                        <li><a class="nav-link" href="#">Vĩnh Phúc</a></li>
+                                                        <li><a class="nav-link" href="#">Bình Phước</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timKiem nav-item">
+                            <div class="input-group mt-1">
+                                <div class="input-group-text">
+                                    <img style="border: none;" class="img" src="../images/timkiem.png" alt="" width="20">
+                                </div>
+                                <input style="border: none;width: 270px;" class="form-control" type="search" name="search" id="searchSP" placeholder="Bạn cần tìm gì?">
+                            </div>
+                            <div id="searchSuggestions" class="search-suggestions">
+
+                            </div>
+                        </li>
+                        <li class="gioiThieu nav-item mt-1">
+                            <a class="nav-link" href="../html/introduce.html">
+                                <img src="../images/idea.png" alt="" width="25">
+                                <p class="d-inline" style="color:white;">Giới thiệu</p>
+                            </a>
+                        </li>
+                        <li class="goiMuaHang nav-item mt-1">
+                            <a class="nav-link" href="../html/contact.html">
+                                <img class="img" src="../images/dienthoai.png" alt="" width="25">
+                                <p class="d-inline" style="color:white;">Liên hệ</p>
+                            </a>
+                        </li>
+                        <li class="cuaHangGanNhat nav-item mt-1">
+                            <a class="nav-link" href="../html/sitemap.html">
+                                <img class="img" src="../images/sitemap (1).png" alt="" width="25">
+                                <p class="d-inline" style="color:white">Sitemap</p>
+                            </a>
+                        </li>
+                        <li class="traCuuDonHang nav-item mt-1">
+                            <a class="nav-link" href="../html/tracuudonhang.html">
+                                <img src="../images/xechohang.png" alt="" width="30">
+                                <p class="d-inline" style="color:white">Tra cứu đơn hàng</p>
+                            </a>
+                        </li>
+                        <li class="gioHang nav-item mt-1">
+                            <a class="nav-link" href="../html/giohang.html">
+                                <img src="../images/giohang.png" alt="" width="25">
+                                <b><span style="position: relative;left: -21px; top: 4px;color:white;" id="countSLSP">0</span></b>
+                                <p class="d-inline" style="color:white; padding-top: 20px;position: relative;top: 2px; left: -10px;">Giỏ hàng</p>
+                            </a>
+                            <script>
+                                updateCartItemCount();
+                            </script>
+                        </li>
+                        <li class="dangNhap nav-item mt-1">
+                            <button id="loginButton" class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#smember">
+                                <img class="img mb-2" src="../images/personlogin.png" alt="" width="20">
+                                <p style="color:white; position: relative; bottom: 10px;">Đăng nhập</p>
+                            </button>
+                            <div class="modal fade" id="smember" tabindex="-1" aria-labelledby="ModalSmember" aria-hidden="true">
+                                <div class="modal-dialog login">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <button style="float: right;" class="modal-close rounded-circle" type="button" data-bs-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <h4 style="text-align: center;font-size: 25px; color: #d70018; font-weight: bold;margin-left: 20px; ">Smember</h4>
+                                            <img src="../images/smember.png" alt="">
+                                            <div class="text">
+                                                <p style="text-align: center; font-weight: 700; font-size: 15px;">Vui lòng đăng nhập tài khoản Smember để xem ưu đãi và thanh toán dễ dàng hơn.</p>
+                                            </div>
+                                            <div class="group-login-btn">
+                                                <a href="../html/dangky.html" class="register-btn"> Đăng ký </a>
+                                                <a href="../html/dangnhap.html" class="login-btn">Đăng nhập</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="row mt-3" style="padding-top: 40px;">
+            <div class="super-cart-container" id="loginThongTinThanhToan">
+                <div class="cart-header">
+                    <div class="back-button">
+                        <a class="back" href="#" onclick="history.back(); return false;">
+                            <img src="../images/muiten.png" alt="" width="30">
+                        </a>
+                        <p class="title"> Thông tin </p>
+                    </div>
+                </div>
+                <div class="cart-info mt-2">
+                    <div class="container-info" style="padding: 0; box-shadow: none;max-width: 600px; margin: 0 auto;">
+                        <div class="view-list" id="list-product">
+                            <div class="view-list-wrapper">
+                                <div class="item">
+                                    <img id="product-image" class="item-img" src="../images/soundpeats_trueair_2_1.webp" alt="Tai nghe Bluetooth Earbuds Soundpeats True Air 2-Đen" style="width: 100px; height: 100px;">
+                                    <div class="item-info">
+                                        <p class="item-name" id="productName">Tai nghe Bluetooth Earbuds Soundpeats True Air 2-Đen</p>
+                                        <div class="item-price">
+                                            <div>
+                                                <div class="box-price" style="margin-bottom: 5px;">
+                                                    <div class="info-box-price">
+                                                        <p class="product-price-show" id="giamoi">620.000đ</p>
+                                                        <p class="product-price-through" id="giaCu">1.300.000đ</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p>
+                                                Số lượng: <span style="font-weight: 600;" class="text-danger" id="product-quantity">2</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-customer">
+                            <p class="info-customer-title">THÔNG TIN KHÁCH HÀNG</p>
+                            <div class="info-customer-wrapper">
+                                <div class="info-customer-main" style="width: 100%;">
+                                    <div class="customer-input-1">
+                                        <div class="customer-name">
+                                            <p style="font-size: 16px;" id="hoTen">Trần Long Vũ</p>
+                                        </div>
+                                        <p class="customer-phone">0915020803</p>
+                                    </div>
+                                    <div class="customer-input-2" style="margin-top: 10px;">
+                                        <div class="box-input">
+                                            <input class="box-input-main" placeholder="Email" type="email" name="email" id="email" maxlength="100" autocomplete="off">
+                                            <label for="email">EMAIL</label>
+                                            <div class="box-input-inline"></div>
+                                        </div>
+                                        <span><i>(*) Hóa đơn VAT sẽ được gửi qua email này</i></span>
+                                    </div>
+                                </div>
+                                <div class="customer-bottom" style="margin-top: 25px;">
+                                    <div class="bottom-item">
+                                        <input type="checkbox" name="emailPromo" id="emailPromo">
+                                        <label for="emailPromo">Nhận email thông báo và ưu đãi từ SoundS</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-payment" style="margin-top: 30px; background: transparent;">
+                            <p class="info-payment-title">Thông tin nhận hàng</p>
+                            <div class="info-payment-wrapper">
+                                <div class="payment-store">
+                                    <div class="payment1">
+                                        <input id="pickup" value="pickup" name="delivery" type="radio" checked="checked">
+                                        <label style="font-size: 16px;" for="pickup" class="mb-0">Nhận tại cửa hàng</label>
+                                    </div>
+                                    <div class="payment2">
+                                        <input id="shipping" value="shipping" name="delivery" type="radio">
+                                        <label style="font-size: 16px;" for="shipping" class="mb-0">Giao hàng tận nơi</label>
+                                    </div>
+                                </div>
+                                <div class="payment-content">
+                                    <div class="payment-content-item" style="width: 100%;">
+                                        <div class="box-select">
+                                            <div class="box-input-city">
+                                                <select name="city" id="city">
+                                                    <option value="Hồ Chí Minh" selected>Hồ Chí Minh</option>
+                                                    <option value="Hà Nội">Hà Nội</option>
+                                                    <option value="Đà Nẵng">Đà Nẵng</option>
+                                                    <option value="Kiên Giang">Kiên Giang</option>
+                                                    <option value="Bình Phước">Bình Phước</option>
+                                                </select>
+                                                <label for="city">TỈNH / THÀNH PHỐ</label>
+                                                <div class="box-input_line"></div>
+                                            </div>
+                                            <div class="box-input-city">
+                                                <select name="city" id="city">
+                                                    <option value="Quận 1" >Quận 1</option>
+                                                    <option value="Quận 2">Quận 2</option>
+                                                    <option value="Quận 4">Quận 4</option>
+                                                    <option value="Quận 6">Quận 6</option>
+                                                    <option value="Quận 7">Quận 7</option>
+                                                    <option value="Quận 8">Quận 8</option>
+                                                    <option value="Quận 9">Quận 9</option>
+                                                    <option value="Quận 11">Quận 11</option>
+                                                    <option value="Quận 12">Quận 12</option>
+                                                    <option value="Quận Thủ Đức">Quận Thủ Đức</option>
+                                                    <option value="Quận Bình Chánh">Quận Bình Chánh</option>
+                                                    <option value="Quận Gò Vấp" selected>Quận Gò Vấp</option>
+                                                </select>
+                                                <label for="city">TỈNH / THÀNH PHỐ</label>
+                                                <div class="box-input_line"></div>
+                                            </div>
+                                        </div>
+                                        <div class="box-select">
+                                            <div class="box-input-stores">
+                                                <select name="store" id="store">
+                                                    <option value="157-159 Nguyễn Thị Minh Khai, P. Phạm Ngũ Lão, Q.1" selected>157-159 Nguyễn Thị Minh Khai, P. Phạm Ngũ Lão, Q.1</option>
+                                                    <option value="134 Nguyễn Thái Học, P. Phạm Ngũ Lão, Q.1, TP HCM">134 Nguyễn Thái Học, P. Phạm Ngũ Lão, Q.1, TP HCM</option>
+                                                    <option value="218-220 Trần Quang Khải, Phường Tân Định, Quận 1">218-220 Trần Quang Khải, Phường Tân Định, Quận 1</option>
+                                                </select>
+                                                <label for="store">CỬA HÀNG</label>
+                                                <div class="box-input_line"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box-note" style="width: 100%;">
+                                        <div class="box-input">
+                                            <input type="text" placeholder="Ghi chú khác (nếu có)" maxlength="255" autocomplete="off" value="" class="box-input-main">
+                                            <label for="ghichu">GHI CHÚ</label>
+                                            <div class="box-input__line"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="bottom-bar container">
+                        <div class="total-box">
+                            <p style="font-weight: 600;" class="title-temp">Tổng tiền tạm tính:</p>
+                            <div class="price">
+                                <span class="total">1.240.000đ</span>
+                            </div>
+                        </div>
+                        <div class="btn-submit mt-2">
+                            <a class="nav-link" href="../html/thanhtoan.html">
+                                <button class="btn btn-danger justify-content-center align-items-center w-100">
+                                    Tiếp tục
+                                  </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

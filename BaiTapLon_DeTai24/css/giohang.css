@@ -1,0 +1,465 @@
+.container-fluid {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    transition: all .3s ease-in;
+}
+
+.modal-backdrop.fade.show {
+    z-index: 4;
+}
+
+.modal-body.modalXemGia {
+    max-height: 325px;
+    overflow-y: auto;
+}
+
+.modal-dialog.modalXemGia {
+    max-width: 432px;
+}
+
+.modalXemGia .row .col-6 .menu-list .nav-link {
+    font-size: 15px;
+}
+
+.modalXemGia .row .col-6 .menu-list .nav-link:hover {
+    color: #d70018;
+    background-color: #f9aab6;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.goiMuaHang .nav-link,
+.cuaHangGanNhat .nav-link,
+.traCuuDonHang .nav-link,
+.gioHang .nav-link,
+.gioiThieu .nav-link {
+    border-radius: 10px 10px 10px 10px;
+}
+
+.goiMuaHang .nav-link:hover,
+.cuaHangGanNhat .nav-link:hover,
+.traCuuDonHang .nav-link:hover,
+.gioHang .nav-link:hover,
+.gioiThieu .nav-link:hover {
+    background-color: #f77488;
+}
+
+.navbar p {
+    font-size: 13px;
+}
+
+.navbar .nav-item {
+    height: auto;
+}
+
+.navbar .nav-item {
+    height: 45px;
+}
+
+button.btn.btn-danger {
+    height: 42px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.input-group.mt-1 {
+    padding-top: 2px;
+}
+
+.input-group-text {
+    border-radius: 15px;
+}
+
+input#search {
+    border-radius: 0px 15px 15px 0px;
+}
+
+.modal-dialog.login {
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 350px;
+    height: 270px;
+    padding: 15px;
+    text-align: center;
+}
+
+.modal-content {
+    border: none;
+}
+
+.group-login-btn {
+    display: flex;
+    gap: 16px;
+}
+
+.register-btn {
+    display: flex;
+    background: linear-gradient(90deg, #ff512f, #dd2440 51%, #ff512f);
+    box-shadow: 0 0 20px #eee;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 2px solid #dd2440;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    flex: 1;
+    padding: 10px;
+    font-weight: 600;
+    transition: 5s;
+    cursor: pointer;
+}
+
+.login-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px #eee;
+    background-image: linear-gradient(90deg, #ff512f, #dd2440 51%, #ff512f);
+    background-size: 200% auto;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    transition: 5s;
+    user-select: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.text p {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 1px;
+    text-align: center;
+}
+
+button.modal-close.rounded-circle {
+    height: 25px;
+    width: 25px;
+    position: relative;
+    left: 15px;
+    bottom: 15px;
+    background: hsla(0, 0%, 4%, .2);
+    color: white;
+    font-weight: bold;
+    border: none;
+    font-size: 18px;
+}
+
+button.modal-close.rounded-circle:hover {
+    background: hsla(0, 0%, 4%, .5);
+}
+
+
+/* tim kiem san pham goi y  */
+
+#searchSuggestions {
+    position: absolute;
+    top: 65px;
+    left: 395px;
+    z-index: 999;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 510px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#searchSuggestions ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#searchSuggestions li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+#searchSuggestions li:last-child {
+    border-bottom: none;
+}
+
+#searchSuggestions img {
+    width: 50px;
+    /* Adjust this value to your preference */
+    height: auto;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+#searchSuggestions a {
+    color: #333;
+    text-decoration: none;
+}
+
+#searchSuggestions a:hover {
+    color: #007bff;
+}
+
+#formGioHang {
+    padding-bottom: 15px;
+    box-sizing: border-box;
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 700px;
+    position: relative;
+}
+
+#formGioHang .gioHang_image {
+    text-align: center;
+    margin: 20px 0;
+    padding-top: 100px;
+}
+
+.giohang-button button {
+    background-color: #d70018;
+    border-radius: 10px 10px 10px 10px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    height: 40px;
+    margin-top: 165px;
+    width: 100%;
+    border: none;
+}
+
+
+/* ... (CSS khác) */
+
+
+/* Phần tử chứa mỗi sản phẩm trong giỏ hàng */
+
+.gioHang_product {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+/* Hình ảnh sản phẩm */
+
+.gioHang_product_img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+
+/* Thông tin sản phẩm */
+
+.gioHang_product_info {
+    flex: 1;
+    /* Chia sẻ không gian trống với các phần tử khác */
+}
+
+
+/* Tên sản phẩm */
+
+.gioHang_product_name {
+    font-weight: 600;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+
+/* Giá sản phẩm */
+
+.gioHang_product_price {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #d70018;
+    font-weight: 600;
+}
+
+
+/* Giá cũ của sản phẩm */
+
+.gioHang_product_oldPrice {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+
+/* Các nút tăng giảm số lượng */
+
+.gioHang_product_quantity {
+    flex: 1;
+    text-align: center;
+}
+
+.gioHang_product_actions {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.quantity-input {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin: 0 10px;
+}
+
+.gioHang_product_info,
+.gioHang_product_quantity {
+    display: inline-block;
+    width: 50%;
+    /* Hoặc 49% để tránh tràn ra ngoài */
+}
+
+
+/* CSS cho checkbox hình tròn */
+
+.checkbox-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: -50px;
+    left: -35px;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
+
+.checkbox-container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.checkbox-container input:checked~.checkmark {
+    background-color: #d70018;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked~.checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 7px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+#selectAllCheckbox {
+    position: absolute;
+    opacity: 0;
+}
+
+#selectAllCheckbox+label {
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+}
+
+#selectAllCheckbox+label:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#selectAllCheckbox:checked+label:before {
+    background-color: #d70018;
+    /* Màu nền của hình tròn khi checkbox được chọn */
+}
+
+#selectAllCheckbox:checked+label:after {
+    content: '\2713';
+    font-size: 16px;
+    color: #fff;
+    position: absolute;
+    top: -1px;
+    left: 5px;
+}
+
+div#bottomBar {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div#bottomBar button {
+    margin-left: 380px;
+}
+
+.notification {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    z-index: 999;
+    display: none;
+    width: 300px;
+    font-weight: 600;
+}
+
+.show-notification {
+    display: block;
+    animation: slideUp 1s forwards;
+}
+
+@keyframes slideUp {
+    0% {
+        bottom: 500px;
+    }
+    100% {
+        bottom: 600px;
+    }
+}

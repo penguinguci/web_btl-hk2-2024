@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundS - Đăng nhập</title>
+    <link rel="icon" type="image/png" href="../images/logo_icon.png">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../css/dangnhap.css">
+    <script src="../js/main.js"></script>
+    <script src="../js/timkiemsanpham.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg sticky" style="background-color: #d70018;">
+                <a class="navbar-brand col-md-2" href="../html/index.html">
+                    <img style="float:right;margin-right: 30px;" class="img-fluid" src="../images/logo.png" alt="logo" width="120" height="50">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: -35px;">
+                    <ul class="navbar-nav me-auto mb-lg-0">
+                        <li class="danhMuc nav-item dropdown">
+                            <button class="btn btn-danger dropdown-toggle me-2 mt-1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img class="img" src="../images/danhmuc.png" alt="danhmuc" width="30">
+                                    <p style="display: inline; color:white">Danh mục</p>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li class="dropend">
+                                    <a class="dropdown-item" href="../html/tainghe.html">
+                                        <img src="../images/icon-tainghe-220.svg" alt="" width="20"> Tai nghe</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../html/loa.html">
+                                        <img src="../images/Speaker-2-icon.png" alt="" width="20"> Loa
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../html/micthuam.html">
+                                        <img src="../images/Microphone-4-icon.png" alt="" width="20"> Mic thu âm </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../html/mickaraoke.html">
+                                        <img src="../images/Microphone-6-icon.png" alt="" width="20"> Mic Karaoke</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="xemGiaTai nav-item dropdown">
+                            <button class="btn btn-danger dropdown-toggle me-2 mt-1" type="button" data-bs-toggle="modal" data-bs-target="#xemGiaTai">
+                                <img  class="img" src="../images/vitri.png" alt="location"  width="30">
+                                <p style="display: inline; color:white">Xem giá tại</p>
+                            </button>
+                            <div class="modal fade" id="xemGiaTai" tabindex="-1" aria-labelledby="ModalXemGia" aria-hidden="true">
+                                <div class="modal-dialog modalXemGia">
+                                    <div class="modal-content">
+                                        <div class="modal-header" style="background-color: #d70018;">
+                                            <div class="input-group">
+                                                <div class="input-group-text" style="border: none;">
+                                                    <img class="img" src="../images/timkiem.png" alt="" width="15">
+                                                </div>
+                                                <input style="border: none;" class="form-control" type="search" name="search" id="search" placeholder="Nhập tên tỉnh thành">
+                                            </div>
+                                            <button style="background-color: #d70018; border: none; color:white; font-weight: bold; font-size: 18px;" class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">Đóng&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body modalXemGia">
+                                            <p style="font-size: 16px;" class="menu-label">Vui lòng chọn tỉnh, thành phố để biết chính xác giá, khuyến mãi và tồn kho</p>
+                                            <div class="row">
+                                                <div class="col-6 form-check">
+                                                    <ul class="menu-list">
+                                                        <li><a class="nav-link" href="#">Hồ Chí Minh</a></li>
+                                                        <li><a class="nav-link" href="#">An Giang</a></li>
+                                                        <li><a class="nav-link" href="#">Bắc Giang</a></li>
+                                                        <li><a class="nav-link" href="#">Bến Tre</a></li>
+                                                        <li><a class="nav-link" href="#">Bình Thuận</a></li>
+                                                        <li><a class="nav-link" href="#">Cần Thơ</a></li>
+                                                        <li><a class="nav-link" href="#">Đắk Lắk</a></li>
+                                                        <li><a class="nav-link" href="#">Đồng Tháp</a></li>
+                                                        <li><a class="nav-link" href="#">Hải Phòng</a></li>
+                                                        <li><a class="nav-link" href="#">Lâm Đồng</a></li>
+                                                        <li><a class="nav-link" href="#">Nghệ An</a></li>
+                                                        <li><a class="nav-link" href="#">Quảng Bình</a></li>
+                                                        <li><a class="nav-link" href="#">Sóc Trăng</a></li>
+                                                        <li><a class="nav-link" href="#">Thái Nguyên</a></li>
+                                                        <li><a class="nav-link" href="#">Thừa Thiên - Huế</a></li>
+                                                        <li><a class="nav-link" href="#">Trà Vinh</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-6 form-check">
+                                                    <ul class="menu-list">
+                                                        <li><a class="nav-link" href="#">Hà Nội</a></li>
+                                                        <li><a class="nav-link" href="#">Bà Rịa - Vũng Tàu</a></li>
+                                                        <li><a class="nav-link" href="#">Bắc Ninh</a></li>
+                                                        <li><a class="nav-link" href="#">Bình Dương</a></li>
+                                                        <li><a class="nav-link" href="#">Đà Nẵng</a></li>
+                                                        <li><a class="nav-link" href="#">Đồng Nai</a></li>
+                                                        <li><a class="nav-link" href="#">Hải Dương</a></li>
+                                                        <li><a class="nav-link" href="#">Kiên Giang</a></li>
+                                                        <li><a class="nav-link" href="#">Long An</a></li>
+                                                        <li><a class="nav-link" href="#">Phú Thọ</a></li>
+                                                        <li><a class="nav-link" href="#">Quảng Ninh</a></li>
+                                                        <li><a class="nav-link" href="#">Tây Ninh</a></li>
+                                                        <li><a class="nav-link" href="#">Thanh Hóa</a></li>
+                                                        <li><a class="nav-link" href="#">Tiền Giang</a></li>
+                                                        <li><a class="nav-link" href="#">Vĩnh Phúc</a></li>
+                                                        <li><a class="nav-link" href="#">Bình Phước</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timKiem nav-item">
+                            <div class="input-group mt-1">
+                                <div class="input-group-text">
+                                    <img style="border: none;" class="img" src="../images/timkiem.png" alt="" width="20">
+                                </div>
+                                <input style="border: none;width: 270px;" class="form-control" type="search" name="search" id="searchSP" placeholder="Bạn cần tìm gì?">
+                            </div>
+                            <div id="searchSuggestions" class="search-suggestions">
+
+                            </div>
+                        </li>
+                        <li class="gioiThieu nav-item mt-1">
+                            <a class="nav-link" href="../html/introduce.html">
+                                <img src="../images/idea.png" alt="" width="25">
+                                <p class="d-inline" style="color:white;">Giới thiệu</p>
+                            </a>
+                        </li>
+                        <li class="goiMuaHang nav-item mt-1">
+                            <a class="nav-link" href="../html/contact.html">
+                                <img class="img" src="../images/dienthoai.png" alt="" width="25">
+                                <p class="d-inline" style="color:white;">Liên hệ</p>
+                            </a>
+                        </li>
+                        <li class="cuaHangGanNhat nav-item mt-1">
+                            <a class="nav-link" href="../html/sitemap.html">
+                                <img class="img" src="../images/sitemap (1).png" alt="" width="25">
+                                <p class="d-inline" style="color:white">Sitemap</p>
+                            </a>
+                        </li>
+                        <li class="traCuuDonHang nav-item mt-1">
+                            <a class="nav-link" href="../html/tracuudonhang.html">
+                                <img src="../images/xechohang.png" alt="" width="30">
+                                <p class="d-inline" style="color:white">Tra cứu đơn hàng</p>
+                            </a>
+                        </li>
+                        <li class="gioHang nav-item mt-1">
+                            <a class="nav-link" href="../html/giohang.html">
+                                <img src="../images/giohang.png" alt="" width="25">
+                                <b><span style="position: relative;left: -21px; top: 4px;color:white;" id="countSLSP">0</span></b>
+                                <p class="d-inline" style="color:white; padding-top: 20px;position: relative;top: 2px; left: -10px;">Giỏ hàng</p>
+                            </a>
+                            <script>
+                                updateCartItemCount();
+                            </script>
+                        </li>
+                        <li class="dangNhap nav-item mt-1">
+                            <button id="loginButton" class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#smember">
+                                <img class="img mb-2" src="../images/personlogin.png" alt="" width="20">
+                                <p style="color:white; position: relative; bottom: 10px;">Đăng nhập</p>
+                            </button>
+                            <div class="modal fade" id="smember" tabindex="-1" aria-labelledby="ModalSmember" aria-hidden="true">
+                                <div class="modal-dialog login">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <button style="float: right;" class="modal-close rounded-circle" type="button" data-bs-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <h4 style="text-align: center;font-size: 25px; color: #d70018; font-weight: bold;margin-left: 20px; ">Smember</h4>
+                                            <img src="../images/smember.png" alt="">
+                                            <div class="text">
+                                                <p style="text-align: center; font-weight: 700; font-size: 15px;">Vui lòng đăng nhập tài khoản Smember để xem ưu đãi và thanh toán dễ dàng hơn.</p>
+                                            </div>
+                                            <div class="group-login-btn">
+                                                <a href="../html/dangky.html" class="register-btn"> Đăng ký </a>
+                                                <a href="../html/dangnhap.html" class="login-btn">Đăng nhập</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="row mt-5" style="padding-top: 40px;">
+            <div id="loginForm">
+                <div class="back-button">
+                    <a href="#" onclick="history.back(); return false;">
+                        <img src="../images/muiten.png" alt="" width="30">
+                    </a>
+                </div>
+                <div class="login_image">
+                    <img src="../images/man.png" alt="logo_smember" class="img" height="100">
+                    <h1>Đăng nhập tài khoản SoundS</h1>
+                </div>
+                <!-- Message -->
+                <div id="loginMessage" class="mt-3 message"></div>
+                <div class="login-form">
+                    <form class="m-3">
+                        <div class="form-group">
+                            <div class="box-input">
+                                <input type="text" placeholder="Nhập số điện thoại/email" id="SDT_Email" maxlength="255" required="required" autocomplete="off" class="input_main">
+                                <label for="SDT_Email" class="input_label">SỐ ĐIỆN THOẠI/EMAIL</label>
+                                <div class="box-input_inline"></div>
+                            </div>
+                            <div class="box-input">
+                                <input type="password" placeholder="Nhập mật khẩu" id="password" maxlength="255" required="required" autocomplete="off" class="input_main">
+                                <label for="SDT_Email" class="input_label">MẬT KHẨU</label>
+                                <div class="box-input_inline"></div>
+                            </div>
+                            <div style="float: right;">
+                                <a class="nav-link" href="#">
+                                    <p class="forget-pass">Quên mật khẩu?</p>
+                                </a>
+                            </div>
+                            <div class="mt-5">
+                                <button onclick="loginAccount()" class="btn col-12" style="background-color: #d70018; color: white; font-weight: bold;" type="button">Đăng nhập</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="other mt-4">
+                        <hr style="float: left; margin-left: 25px;">
+                        <p style="float: left; font-size: 18px;">hoặc đăng nhập bằng</p>
+                        <hr style="float: left;">
+                    </div>
+                    <div class="social mt-5">
+                        <div style="float: left;" class="login_google me-4">
+                            <img class="img ms-3" src="../images/google_icon.webp" alt="" width="24">
+                            <p style="font-size: 19px;">Google</p>
+                        </div>
+                        <div style="float: left;" class="login_zalo">
+                            <img class="img ms-1" src="../images/zalo_icon.png" alt="" width="24">
+                            <p style="font-size: 19px;">Zalo</p>
+                        </div>
+                    </div>
+                    <div class="login-question mt-5">
+                        <p class="question_text">Bạn chưa có tài khoản?</p>
+                        <a href="../html/dangky.html" class="nav-link resgiter">Đăng ký ngay</a>
+                    </div>
+                    <div class="chinhSach">
+                        <a class="mt-3" style="color:#d70018;font-size: 18px;float: left;margin-left: 209px;;" href="#"><b>Xem chính sách ưu đãi SoundS</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

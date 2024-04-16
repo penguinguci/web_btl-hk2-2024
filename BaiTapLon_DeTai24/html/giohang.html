@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundS - Giỏ hàng</title>
+    <link rel="icon" type="image/png" href="../images/logo_icon.png">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/boxicons.js"></script>
+    <link rel="stylesheet" href="../css/giohang.css">
+    <script src="../js/main.js"></script>
+    <script src="../js/timkiemsanpham.js"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg sticky" style="background-color: #d70018;">
+                <a class="navbar-brand col-md-2" href="../html/index.html">
+                    <img style="float:right;margin-right: 30px;" class="img-fluid" src="../images/logo.png" alt="logo" width="120" height="50">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: -35px;">
+                    <ul class="navbar-nav me-auto mb-lg-0">
+                        <li class="danhMuc nav-item dropdown">
+                            <button class="btn btn-danger dropdown-toggle me-2 mt-1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img class="img" src="../images/danhmuc.png" alt="danhmuc" width="30">
+                                    <p style="display: inline; color:white">Danh mục</p>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li class="dropend">
+                                    <a class="dropdown-item" href="../html/tainghe.html">
+                                        <img src="../images/icon-tainghe-220.svg" alt="" width="20"> Tai nghe</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../html/loa.html">
+                                        <img src="../images/Speaker-2-icon.png" alt="" width="20"> Loa
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../html/micthuam.html">
+                                        <img src="../images/Microphone-4-icon.png" alt="" width="20"> Mic thu âm </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../html/mickaraoke.html">
+                                        <img src="../images/Microphone-6-icon.png" alt="" width="20"> Mic Karaoke</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="xemGiaTai nav-item dropdown">
+                            <button class="btn btn-danger dropdown-toggle me-2 mt-1" type="button" data-bs-toggle="modal" data-bs-target="#xemGiaTai">
+                                <img  class="img" src="../images/vitri.png" alt="location"  width="30">
+                                <p style="display: inline; color:white">Xem giá tại</p>
+                            </button>
+                            <div class="modal fade" id="xemGiaTai" tabindex="-1" aria-labelledby="ModalXemGia" aria-hidden="true">
+                                <div class="modal-dialog modalXemGia">
+                                    <div class="modal-content">
+                                        <div class="modal-header" style="background-color: #d70018;">
+                                            <div class="input-group">
+                                                <div class="input-group-text" style="border: none;">
+                                                    <img class="img" src="../images/timkiem.png" alt="" width="15">
+                                                </div>
+                                                <input style="border: none;" class="form-control" type="search" name="search" id="search" placeholder="Nhập tên tỉnh thành">
+                                            </div>
+                                            <button style="background-color: #d70018; border: none; color:white; font-weight: bold; font-size: 18px;" class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">Đóng&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body modalXemGia">
+                                            <p style="font-size: 16px;" class="menu-label">Vui lòng chọn tỉnh, thành phố để biết chính xác giá, khuyến mãi và tồn kho</p>
+                                            <div class="row">
+                                                <div class="col-6 form-check">
+                                                    <ul class="menu-list">
+                                                        <li><a class="nav-link" href="#">Hồ Chí Minh</a></li>
+                                                        <li><a class="nav-link" href="#">An Giang</a></li>
+                                                        <li><a class="nav-link" href="#">Bắc Giang</a></li>
+                                                        <li><a class="nav-link" href="#">Bến Tre</a></li>
+                                                        <li><a class="nav-link" href="#">Bình Thuận</a></li>
+                                                        <li><a class="nav-link" href="#">Cần Thơ</a></li>
+                                                        <li><a class="nav-link" href="#">Đắk Lắk</a></li>
+                                                        <li><a class="nav-link" href="#">Đồng Tháp</a></li>
+                                                        <li><a class="nav-link" href="#">Hải Phòng</a></li>
+                                                        <li><a class="nav-link" href="#">Lâm Đồng</a></li>
+                                                        <li><a class="nav-link" href="#">Nghệ An</a></li>
+                                                        <li><a class="nav-link" href="#">Quảng Bình</a></li>
+                                                        <li><a class="nav-link" href="#">Sóc Trăng</a></li>
+                                                        <li><a class="nav-link" href="#">Thái Nguyên</a></li>
+                                                        <li><a class="nav-link" href="#">Thừa Thiên - Huế</a></li>
+                                                        <li><a class="nav-link" href="#">Trà Vinh</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-6 form-check">
+                                                    <ul class="menu-list">
+                                                        <li><a class="nav-link" href="#">Hà Nội</a></li>
+                                                        <li><a class="nav-link" href="#">Bà Rịa - Vũng Tàu</a></li>
+                                                        <li><a class="nav-link" href="#">Bắc Ninh</a></li>
+                                                        <li><a class="nav-link" href="#">Bình Dương</a></li>
+                                                        <li><a class="nav-link" href="#">Đà Nẵng</a></li>
+                                                        <li><a class="nav-link" href="#">Đồng Nai</a></li>
+                                                        <li><a class="nav-link" href="#">Hải Dương</a></li>
+                                                        <li><a class="nav-link" href="#">Kiên Giang</a></li>
+                                                        <li><a class="nav-link" href="#">Long An</a></li>
+                                                        <li><a class="nav-link" href="#">Phú Thọ</a></li>
+                                                        <li><a class="nav-link" href="#">Quảng Ninh</a></li>
+                                                        <li><a class="nav-link" href="#">Tây Ninh</a></li>
+                                                        <li><a class="nav-link" href="#">Thanh Hóa</a></li>
+                                                        <li><a class="nav-link" href="#">Tiền Giang</a></li>
+                                                        <li><a class="nav-link" href="#">Vĩnh Phúc</a></li>
+                                                        <li><a class="nav-link" href="#">Bình Phước</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timKiem nav-item">
+                            <div class="input-group mt-1">
+                                <div class="input-group-text">
+                                    <img style="border: none;" class="img" src="../images/timkiem.png" alt="" width="20">
+                                </div>
+                                <input style="border: none;width: 270px;" class="form-control" type="search" name="search" id="searchSP" placeholder="Bạn cần tìm gì?">
+                            </div>
+                            <div id="searchSuggestions" class="search-suggestions">
+
+                            </div>
+                        </li>
+                        <li class="gioiThieu nav-item mt-1">
+                            <a class="nav-link" href="../html/introduce.html">
+                                <img src="../images/idea.png" alt="" width="25">
+                                <p class="d-inline" style="color:white;">Giới thiệu</p>
+                            </a>
+                        </li>
+                        <li class="goiMuaHang nav-item mt-1">
+                            <a class="nav-link" href="../html/contact.html">
+                                <img class="img" src="../images/dienthoai.png" alt="" width="25">
+                                <p class="d-inline" style="color:white;">Liên hệ</p>
+                            </a>
+                        </li>
+                        <li class="cuaHangGanNhat nav-item mt-1">
+                            <a class="nav-link" href="../html/sitemap.html">
+                                <img class="img" src="../images/sitemap (1).png" alt="" width="25">
+                                <p class="d-inline" style="color:white">Sitemap</p>
+                            </a>
+                        </li>
+                        <li class="traCuuDonHang nav-item mt-1">
+                            <a class="nav-link" href="../html/tracuudonhang.html">
+                                <img src="../images/xechohang.png" alt="" width="30">
+                                <p class="d-inline" style="color:white">Tra cứu đơn hàng</p>
+                            </a>
+                        </li>
+                        <li class="gioHang nav-item mt-1">
+                            <a class="nav-link" href="../html/giohang.html">
+                                <img src="../images/giohang.png" alt="" width="25">
+                                <b><span style="position: relative;left: -21px; top: 4px;color:white;" id="countSLSP">0</span></b>
+                                <p class="d-inline" style="color:white; padding-top: 20px;position: relative;top: 2px; left: -10px;">Giỏ hàng</p>
+                            </a>
+                        </li>
+                        <li class="dangNhap nav-item mt-1">
+                            <button id="loginButton" class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#smember">
+                                    <img class="img mb-2" src="../images/personlogin.png" alt="" width="20">
+                                    <p style="color:white; position: relative; bottom: 10px;">Đăng nhập</p>
+                            </button>
+                            <div class="modal fade" id="smember" tabindex="-1" aria-labelledby="ModalSmember" aria-hidden="true">
+                                <div class="modal-dialog login">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <button style="float: right;" class="modal-close rounded-circle" type="button" data-bs-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            <h4 style="text-align: center;font-size: 25px; color: #d70018; font-weight: bold;margin-left: 20px; ">Smember</h4>
+                                            <img src="../images/smember.png" alt="">
+                                            <div class="text">
+                                                <p style="text-align: center; font-weight: 700; font-size: 15px;">Vui lòng đăng nhập tài khoản Smember để xem ưu đãi và thanh toán dễ dàng hơn.</p>
+                                            </div>
+                                            <div class="group-login-btn">
+                                                <a href="../html/dangky.html" class="register-btn"> Đăng ký </a>
+                                                <a href="../html/dangnhap.html" class="login-btn">Đăng nhập</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="row mt-5" style="padding-top: 30px;">
+            <div id="notification" class="notification"></div>
+            <div id="formGioHang" style="padding-left: 50px;">
+                <div class="back-button" style="display: flex;">
+                    <a hre f="#" onclick="history.back(); return false;">
+                        <img src="../images/muiten.png" alt="" width="30">
+                    </a>
+                    <div class="title-giohang" style="padding-left: 235px;">
+                        <h5 style="font-size: 18px; font-weight: 600; margin-top: 5px;">Giỏ hàng của bạn</h5>
+                    </div>
+                </div>
+                <div class="gioHang_image">
+                    <img src="../images/Shipper_CPS3.webp" alt="logo_smember" class="img" height="190" width="230">
+                </div>
+                <div class="content" style="text-align: center; font-size: 17px;">
+                    <p>Giỏ hàng của bạn đang trống. <br> Hãy chọn thêm sản phẩm để mua sắm nhé</p>
+                </div>
+                <div class="giohang-button">
+                    <a href="../html/index.html">
+                        <button class="" type="button">Quay lại trang chủ</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Lấy danh sách sản phẩm từ localStorage
+                let cartItemsNew = JSON.parse(localStorage.getItem('cartItemsNew')) || [];
+
+                // Hiển thị sản phẩm trong giỏ hàng
+                const gioHangDiv = document.getElementById('formGioHang');
+                gioHangDiv.innerHTML = '';
+
+                // Hiển thị tiêu đề "Giỏ hàng của bạn" và mũi tên quay lại
+                const backButtonDiv = document.createElement('div');
+                backButtonDiv.className = 'back-button';
+                backButtonDiv.style.display = 'flex';
+                backButtonDiv.innerHTML = `
+                    <a href="#" onclick="history.back(); return false;">
+                        <img src="../images/muiten.png" alt="" width="30">
+                    </a>
+                    <div class="title-giohang mb-3" style="padding-left: 235px;">
+                        <h5 style="font-size: 18px; font-weight: 600; margin-top: 5px;">Giỏ hàng của bạn</h5>
+                    </div>
+                `;
+                gioHangDiv.appendChild(backButtonDiv);
+
+                // Thêm checkbox "Chọn tất cả"
+                const selectAllCheckbox = document.createElement('input');
+                selectAllCheckbox.type = 'checkbox';
+                selectAllCheckbox.id = 'selectAllCheckbox';
+                selectAllCheckbox.addEventListener('change', function() {
+                    const checkboxes = document.querySelectorAll('.product-checkbox');
+                    checkboxes.forEach(function(checkbox) {
+                        checkbox.checked = selectAllCheckbox.checked;
+                    });
+                    updateTotalPrice(cartItemsNew);
+                });
+
+                const selectAllLabel = document.createElement('label');
+                selectAllLabel.htmlFor = 'selectAllCheckbox';
+                selectAllLabel.textContent = 'Chọn tất cả';
+
+                gioHangDiv.appendChild(selectAllCheckbox);
+                gioHangDiv.appendChild(selectAllLabel);
+
+
+                // Hiển thị danh sách sản phẩm trong giỏ hàng
+                displayCartItems(gioHangDiv, cartItemsNew);
+
+                // Cập nhật số lượng sản phẩm trong giỏ hàng
+                document.getElementById('countSLSP').textContent = cartItemsNew.length;
+
+                // Lấy danh sách checkbox sản phẩm
+                const checkboxes = document.querySelectorAll('.product-checkbox');
+
+                // Thêm sự kiện khi checkbox được chọn/deselect
+                checkboxes.forEach(function(checkbox) {
+                    checkbox.addEventListener('change', function() {
+                        var productName = this.parentElement.nextElementSibling.querySelector('.gioHang_product_name').textContent;
+                        var product = cartItemsNew.find(item => item.name === productName);
+                        if (product) {
+                            product.quantity = this.checked ? 1 : 0;
+                        }
+                        updateTotalPrice(cartItemsNew);
+                    });
+                });
+
+                // Thêm thanh sticky bottom
+                const bottomBarDiv = document.createElement('div');
+                bottomBarDiv.id = 'bottomBar';
+                bottomBarDiv.style.position = 'fixed';
+                bottomBarDiv.style.bottom = '0';
+                bottomBarDiv.style.left = '0';
+                bottomBarDiv.style.right = '0';
+                bottomBarDiv.style.backgroundColor = '#fff';
+                bottomBarDiv.style.padding = '15px';
+                bottomBarDiv.style.borderTop = '1px solid #ddd';
+                bottomBarDiv.innerHTML = `
+                    <!-- Hiển thị số tiền tạm tính của sản phẩm được chọn -->
+                    <p id="totalPrice" style="font-weight: bold; font-size: 16px;">Số tiền tạm tính: 0đ</p>
+                    <!-- Nút mua ngay -->
+                    <a href="../html/thongtinthanhtoan.html">
+                        <button onclick="buyNow()" style="padding: 10px 20px; background-color: #d70018; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Mua ngay</button>
+                    </a>
+                `;
+                document.body.appendChild(bottomBarDiv);
+                // Cập nhật số tiền tạm tính khi thay đổi số lượng sản phẩm
+                updateTotalPrice(cartItemsNew);
+            });
+
+            function decreaseQuantity(button) {
+                var inputElement = button.nextElementSibling;
+                var currentValue = parseInt(inputElement.value);
+                if (currentValue > 1) {
+                    inputElement.value = currentValue - 1;
+                    updateCartItemQuantity(inputElement, -1);
+                    updateTotalPrice();
+                }
+            }
+
+            function increaseQuantity(button) {
+                var inputElement = button.previousElementSibling;
+                var currentValue = parseInt(inputElement.value);
+                inputElement.value = currentValue + 1;
+                updateCartItemQuantity(inputElement, 1);
+                updateTotalPrice();
+            }
+
+            function updateCartItemQuantity(inputElement, change) {
+                var productName = inputElement.parentElement.parentElement.querySelector('.gioHang_product_name').textContent;
+                var cartItems = getCartItems();
+                var product = cartItems.find(item => item.name === productName);
+                if (product) {
+                    product.quantity += change;
+                    // Lưu lại danh sách sản phẩm vào localStorage
+                    localStorage.setItem('cartItemsNew', JSON.stringify(cartItems));
+                }
+            }
+
+            // Hàm lấy danh sách sản phẩm từ localStorage
+            function getCartItems() {
+                return JSON.parse(localStorage.getItem('cartItemsNew')) || [];
+            }
+
+            function updateTotalPrice() {
+                var totalPrice = 0;
+                const selectedProducts = [];
+
+                const checkboxes = document.querySelectorAll('.product-checkbox');
+                const cartItems = getCartItems();
+
+                // Loop through checkboxes and collect selected products
+                checkboxes.forEach(function(checkbox) {
+                    if (checkbox.checked) {
+                        const productName = checkbox.parentElement.nextElementSibling.querySelector('.gioHang_product_name').textContent;
+                        selectedProducts.push(cartItems.find(item => item.name.toLowerCase().trim() === productName.toLowerCase().trim()));
+                    }
+                });
+
+                // Calculate total price based on selected products
+                selectedProducts.forEach(product => {
+                    if (product) {
+                        totalPrice += parseInt(product.giaMoi) * product.quantity;
+                    }
+                });
+
+                // Update the total price display
+                document.getElementById('totalPrice').textContent = 'Số tiền tạm tính: ' + totalPrice + 'đ';
+            }
+
+            function deleteProduct(button) {
+                var productName = button.parentElement.parentElement.querySelector('.gioHang_product_name').textContent;
+                var cartItems = getCartItems();
+                var index = cartItems.findIndex(item => item.name === productName);
+                if (index !== -1) {
+                    cartItems.splice(index, 1); // Xóa sản phẩm khỏi danh sách
+                    localStorage.setItem('cartItemsNew', JSON.stringify(cartItems)); // Lưu lại danh sách mới vào localStorage
+                    button.parentElement.parentElement.remove(); // Xóa sản phẩm khỏi giao diện
+                    updateTotalPrice(); // Cập nhật số tiền tạm tính
+                    document.getElementById('countSLSP').textContent = cartItems.length; // Cập nhật số lượng sản phẩm trong giỏ hàng
+                    showSuccessMessage(); // Hiển thị thông báo thành công
+                }
+            }
+
+
+            function showSuccessMessage() {
+                // Hiển thị thông báo
+                const notification = document.getElementById('notification');
+                notification.textContent = 'Xóa sản phẩm thành công';
+                notification.classList.add('show-notification');
+                setTimeout(function() {
+                    notification.classList.remove('show-notification');
+                }, 2000); // 2 giây sau đó ẩn thông báo
+            }
+
+
+
+            function displayCartItems(container, items) {
+                items.forEach(function(item) {
+                    // Kiểm tra xem sản phẩm đã tồn tại trong giỏ hàng chưa
+                    var existingProduct = container.querySelector(`.gioHang_product[data-name="${item.name}"]`);
+
+                    if (existingProduct) {
+                        // Nếu sản phẩm đã tồn tại, tăng số lượng
+                        var quantityInput = existingProduct.querySelector('.quantity-input');
+                        var currentValue = parseInt(quantityInput.value);
+                        quantityInput.value = currentValue + 1;
+                    } else {
+                        // Nếu sản phẩm chưa tồn tại, thêm sản phẩm mới
+                        var productDiv = document.createElement('div');
+                        productDiv.className = 'gioHang_product';
+                        productDiv.setAttribute('data-name', item.name);
+                        productDiv.innerHTML = `
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="product-checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <img src="${item.image}" alt="${item.name}" class="gioHang_product_img">
+                            <div class="gioHang_product_info">
+                                <p class="gioHang_product_name">${item.name}</p>
+                                <p class="gioHang_product_price">${item.giaMoi}</p>
+                                <p class="gioHang_product_oldPrice">${item.giaCu}</p>
+                            </div>
+                            <div class="gioHang_product_quantity">
+                                <button class="quantity-button" onclick="decreaseQuantity(this)">-</button>
+                                <input type="number" class="quantity-input" value="1">
+                                <button class="quantity-button" onclick="increaseQuantity(this)">+</button>
+                                <button style="border: none; position: relative; top: 7px;" class="delete-button" onclick="deleteProduct(this)">
+                                    <box-icon name='trash-alt'></box-icon>
+                                </button> <!-- Thêm nút xóa -->
+                            </div>
+                        `;
+                        // Thêm sản phẩm vào container
+                        container.appendChild(productDiv);
+                    }
+                });
+            }
+        </script>
+
+
+
+
+    </div>
+</body>
+
+</html>

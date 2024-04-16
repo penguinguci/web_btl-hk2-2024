@@ -1,0 +1,598 @@
+.container-fluid {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    transition: all .3s ease-in;
+}
+
+.modal-backdrop.fade.show {
+    z-index: 4;
+}
+
+.modal-body.modalXemGia {
+    max-height: 325px;
+    overflow-y: auto;
+}
+
+.modal-dialog.modalXemGia {
+    max-width: 432px;
+}
+
+.modalXemGia .row .col-6 .menu-list .nav-link {
+    font-size: 15px;
+}
+
+.modalXemGia .row .col-6 .menu-list .nav-link:hover {
+    color: #d70018;
+    background-color: #f9aab6;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.goiMuaHang .nav-link,
+.cuaHangGanNhat .nav-link,
+.traCuuDonHang .nav-link,
+.gioHang .nav-link,
+.gioiThieu .nav-link {
+    border-radius: 10px 10px 10px 10px;
+}
+
+.goiMuaHang .nav-link:hover,
+.cuaHangGanNhat .nav-link:hover,
+.traCuuDonHang .nav-link:hover,
+.gioHang .nav-link:hover,
+.gioiThieu .nav-link:hover {
+    background-color: #f77488;
+}
+
+.navbar p {
+    font-size: 13px;
+}
+
+.navbar .nav-item {
+    height: auto;
+}
+
+.navbar .nav-item {
+    height: 45px;
+}
+
+button.btn.btn-danger {
+    height: 42px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.input-group.mt-1 {
+    padding-top: 2px;
+}
+
+.input-group-text {
+    border-radius: 15px;
+}
+
+input#search {
+    border-radius: 0px 15px 15px 0px;
+}
+
+.modal-dialog.login {
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 350px;
+    height: 270px;
+    padding: 15px;
+    text-align: center;
+}
+
+.modal-content {
+    border: none;
+}
+
+.group-login-btn {
+    display: flex;
+    gap: 16px;
+}
+
+.register-btn {
+    display: flex;
+    background: linear-gradient(90deg, #ff512f, #dd2440 51%, #ff512f);
+    box-shadow: 0 0 20px #eee;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 2px solid #dd2440;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    flex: 1;
+    padding: 10px;
+    font-weight: 600;
+    transition: 5s;
+    cursor: pointer;
+}
+
+.login-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px #eee;
+    background-image: linear-gradient(90deg, #ff512f, #dd2440 51%, #ff512f);
+    background-size: 200% auto;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    transition: 5s;
+    user-select: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.text p {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 1px;
+    text-align: center;
+}
+
+button.modal-close.rounded-circle {
+    height: 25px;
+    width: 25px;
+    position: relative;
+    left: 15px;
+    bottom: 15px;
+    background: hsla(0, 0%, 4%, .2);
+    color: white;
+    font-weight: bold;
+    border: none;
+    font-size: 18px;
+}
+
+button.modal-close.rounded-circle:hover {
+    background: hsla(0, 0%, 4%, .5);
+}
+
+
+/* tim kiem san pham goi y  */
+
+#searchSuggestions {
+    position: absolute;
+    top: 65px;
+    left: 395px;
+    z-index: 999;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 510px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#searchSuggestions ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#searchSuggestions li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+#searchSuggestions li:last-child {
+    border-bottom: none;
+}
+
+#searchSuggestions img {
+    width: 50px;
+    /* Adjust this value to your preference */
+    height: auto;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+#searchSuggestions a {
+    color: #333;
+    text-decoration: none;
+}
+
+#searchSuggestions a:hover {
+    color: #007bff;
+}
+
+
+/* Menu left  */
+
+.menu-left {
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.menu-left ul.nav {
+    padding-left: 0;
+}
+
+.menu-left ul.nav .nav-item {
+    margin-bottom: 5px;
+}
+
+.menu-left ul.nav .nav-link {
+    color: #4b4848;
+    width: 250px;
+    height: auto;
+}
+
+.menu-left ul.nav .nav-link.active {
+    border-radius: 10px;
+    border: 1px solid #d70018;
+    color: #d70018;
+    font-weight: bold;
+}
+
+.menu-left ul.nav .nav-link:hover {
+    color: #d70018;
+    font-weight: bold;
+}
+
+.content-right .tab-content {
+    display: none;
+}
+
+.content-right .tab-content.active {
+    display: block;
+}
+
+
+/* Content trang chu  */
+
+#trangChu .infoUser .welcome {
+    border: 0.5px solid #e7e7e7;
+    border-radius: 15px;
+    display: block;
+    margin-right: 25px;
+    padding: 10px;
+    text-align: center;
+    width: 870px;
+}
+
+#trangChu .infoUser .welcome .welcome-avatar {
+    border: 0.5px solid #9b9b9b;
+    border-radius: 50%;
+    height: 100px;
+    margin: 0 auto 10px;
+    width: 100px;
+}
+
+#trangChu .infoUser .welcome .welcome-content #hoTen {
+    color: #d70018;
+    font-size: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#trangChu .infoUser .welcome .welcome-info-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 25px auto 5px;
+}
+
+#trangChu .infoUser .welcome .welcome-info-content .ngayThamGia,
+.hangThanhVien,
+.diemTichLuy {
+    font-weight: 19px;
+    line-height: 18px;
+}
+
+.trangChu-tips {
+    align-items: center;
+    background: #d0f2ff;
+    border-radius: 8px;
+    display: flex;
+    margin-bottom: 15px;
+    padding: 12px;
+    position: relative;
+}
+
+.trangChu_content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    margin-right: 65px;
+}
+
+.trangChu_content .item-content-gift {
+    background-color: #fef5f0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: calc(33.3333% - 10px);
+}
+
+.item-content-gift .item-content-gift-icon {
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    height: 86px;
+    justify-content: center;
+    margin: 0 auto 20px;
+    width: 86px;
+    background-color: #e59df0;
+}
+
+.item-content-gift .item-content-gift-title {
+    color: #fd2424;
+    font-size: 25px;
+    font-weight: 550;
+    margin: 5px 0 0;
+}
+
+.item-content-gift .item-content-gift-counter {
+    color: #777;
+    font-size: 19px;
+    margin: 5px 0 0;
+}
+
+.item-content-gift .xemChiTiet-button {
+    background-color: #fff;
+    border: 0;
+    border-radius: 20px;
+    color: #fd2424;
+    display: inline-block;
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 10px 40px;
+}
+
+.trangChu_content .item-content-order {
+    background-color: #edf1fd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: calc(33.3333% - 10px);
+}
+
+.item-content-order .item-content-order-icon {
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    height: 86px;
+    justify-content: center;
+    margin: 0 auto 20px;
+    width: 86px;
+    background-color: #fff7ca;
+}
+
+.item-content-order-title {
+    color: #fd2424;
+    font-size: 25px;
+    font-weight: 550;
+    margin: 5px 0 0;
+}
+
+.item-content-order-counter {
+    color: #777;
+    font-size: 19px;
+    margin: 5px 0 0;
+}
+
+.item-content-order .xemChiTiet-button {
+    background-color: #fff;
+    border: 0;
+    border-radius: 20px;
+    color: #fd2424;
+    display: inline-block;
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 10px 40px;
+}
+
+.trangChu_content .item-content-rank {
+    background-color: #f1f8fe;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: calc(33.3333% - 10px);
+}
+
+.item-content-rank .item-content-rank-icon {
+    background-color: #89c1f5;
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    height: 86px;
+    justify-content: center;
+    margin: 0 auto 20px;
+    width: 86px;
+}
+
+.item-content-rank-title {
+    color: #fd2424;
+    font-size: 25px;
+    font-weight: 550;
+    margin: 5px 0 0;
+}
+
+.item-content-rank-counter {
+    color: #777;
+    font-size: 19px;
+    margin: 5px 0 0;
+}
+
+.item-content-rank .xemChiTiet-button {
+    background-color: #fff;
+    border: 0;
+    border-radius: 20px;
+    color: #fd2424;
+    display: inline-block;
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 10px 40px;
+}
+
+
+/* Content lich su mua hang  */
+
+.order-page .order-content {
+    background-color: #f4f6f8;
+    padding-bottom: 60px;
+    position: relative;
+}
+
+.order-content .welcome-container {
+    gap: 15px;
+    padding: 20px;
+}
+
+.welcome-container .welcome-avatar {
+    background-color: #fff;
+    border: 1px solid #eaedef;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.welcome-container .welcome-user {
+    gap: 5px;
+    display: flex!important;
+}
+
+.welcome-container .welcome-user .hoTen {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.order-content .order-menu {
+    border-radius: 8px;
+    box-shadow: none;
+    background-color: #fff;
+    border: 1px solid #eaedef;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .1), 0 2px 6px 2px rgba(60, 64, 67, .15);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 0;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+.order-content .order-menu .order-menu-content {
+    padding-bottom: 15px;
+    display: flex!important;
+    justify-content: space-around!important;
+}
+
+.order-menu-content .order-menu-content-donHang {
+    border-right: 1px solid #111;
+    justify-content: flex-start;
+    margin-top: 15px;
+    width: 100%;
+    display: flex!important;
+    align-items: center!important;
+    flex-direction: column!important;
+}
+
+.content-donHang-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    color: #111;
+    line-height: 17px;
+}
+
+.content-dongHang-donViTinh {
+    font-size: 17px;
+    padding-top: 10px;
+    color: #111;
+    line-height: 17px;
+}
+
+.order-menu-content .order-menu-content-diemTichLuy {
+    justify-content: flex-start;
+    margin-top: 15px;
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    display: flex!important;
+    align-items: center!important;
+    flex-direction: column!important;
+}
+
+.content-diemTichLuy-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    color: #111;
+    line-height: 17px;
+}
+
+.content-diemTichLuy-text {
+    font-size: 17px;
+    padding-top: 10px;
+    color: #111;
+    line-height: 17px;
+}
+
+.order-container .order-container-calendar {
+    align-items: center;
+    display: flex;
+    gap: 5px;
+    position: relative;
+}
+
+.order-container-calendar .lichSu {
+    display: inline-block;
+    min-width: 60px;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+.order-container .nav-tabs a.active {
+    color: white;
+    background-color: #d70018;
+    font-weight: 500;
+}
+
+
+/* tai khoan cua ban  */
+
+.profile-info {
+    margin-top: 20px;
+}
+
+.info-item {
+    margin-bottom: 10px;
+}
+
+.info-item label {
+    display: block;
+    font-weight: bold;
+}
+
+.info-item input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+#updatedInfo {
+    margin-top: 20px;
+}

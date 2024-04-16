@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle"></title>
+    <link rel="icon" type="image/png" href="../images/logo_icon.png">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/swiper-bundle.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/boxicons.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <link rel="stylesheet" href="../css/product.css">
+    <script src="../js/main.js"></script>
+    <script src="../js/timkiemsanpham.js"></script>
+    <script src="../js/product.js"></script>
+</head>
+
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg" style="background-color: #d70018;">
+                <a class="navbar-brand col-md-2" href="../html/index.html">
+                    <img style="float:right;margin-right: 30px;" class="img-fluid" src="../images/logo.png" alt="logo" width="120" height="50">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: -35px;">
+                    <ul class="navbar-nav me-auto mb-lg-0">
+                        <li class="danhMuc nav-item dropdown">
+                            <button class="btn btn-danger dropdown-toggle me-2 mt-1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img class="img" src="../images/danhmuc.png" alt="danhmuc" width="30">
+                                    <p style="display: inline; color:white">Danh mục</p>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li class="dropend">
+                                    <a class="dropdown-item" href="../html/tainghe.html">
+                                        <img src="../images/icon-tainghe-220.svg" alt="" width="20"> Tai nghe</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../html/loa.html">
+                                        <img src="../images/Speaker-2-icon.png" alt="" width="20"> Loa
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../html/micthuam.html">
+                                        <img src="../images/Microphone-4-icon.png" alt="" width="20"> Mic thu âm </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../html/mickaraoke.html">
+                                        <img src="../images/Microphone-6-icon.png" alt="" width="20"> Mic Karaoke</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="xemGiaTai nav-item dropdown">
+                            <button class="btn btn-danger dropdown-toggle me-2 mt-1" type="button" data-bs-toggle="modal" data-bs-target="#xemGiaTai">
+                                <img  class="img" src="../images/vitri.png" alt="location"  width="30">
+                                <p style="display: inline; color:white">Xem giá tại</p>
+                            </button>
+                            <div class="modal fade" id="xemGiaTai" tabindex="-1" aria-labelledby="ModalXemGia" aria-hidden="true">
+                                <div class="modal-dialog modalXemGia">
+                                    <div class="modal-content">
+                                        <div class="modal-header" style="background-color: #d70018;">
+                                            <div class="input-group">
+                                                <div class="input-group-text" style="border: none;">
+                                                    <img class="img" src="../images/timkiem.png" alt="" width="15">
+                                                </div>
+                                                <input style="border: none;" class="form-control" type="search" name="search" id="search" placeholder="Nhập tên tỉnh thành">
+                                            </div>
+                                            <button style="background-color: #d70018; border: none; color:white; font-weight: bold; font-size: 18px;" class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">Đóng&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body modalXemGia">
+                                            <p style="font-size: 16px;" class="menu-label">Vui lòng chọn tỉnh, thành phố để biết chính xác giá, khuyến mãi và tồn kho</p>
+                                            <div class="row">
+                                                <div class="col-6 form-check">
+                                                    <ul class="menu-list">
+                                                        <li><a class="nav-link" href="#">Hồ Chí Minh</a></li>
+                                                        <li><a class="nav-link" href="#">An Giang</a></li>
+                                                        <li><a class="nav-link" href="#">Bắc Giang</a></li>
+                                                        <li><a class="nav-link" href="#">Bến Tre</a></li>
+                                                        <li><a class="nav-link" href="#">Bình Thuận</a></li>
+                                                        <li><a class="nav-link" href="#">Cần Thơ</a></li>
+                                                        <li><a class="nav-link" href="#">Đắk Lắk</a></li>
+                                                        <li><a class="nav-link" href="#">Đồng Tháp</a></li>
+                                                        <li><a class="nav-link" href="#">Hải Phòng</a></li>
+                                                        <li><a class="nav-link" href="#">Lâm Đồng</a></li>
+                                                        <li><a class="nav-link" href="#">Nghệ An</a></li>
+                                                        <li><a class="nav-link" href="#">Quảng Bình</a></li>
+                                                        <li><a class="nav-link" href="#">Sóc Trăng</a></li>
+                                                        <li><a class="nav-link" href="#">Thái Nguyên</a></li>
+                                                        <li><a class="nav-link" href="#">Thừa Thiên - Huế</a></li>
+                                                        <li><a class="nav-link" href="#">Trà Vinh</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-6 form-check">
+                                                    <ul class="menu-list">
+                                                        <li><a class="nav-link" href="#">Hà Nội</a></li>
+                                                        <li><a class="nav-link" href="#">Bà Rịa - Vũng Tàu</a></li>
+                                                        <li><a class="nav-link" href="#">Bắc Ninh</a></li>
+                                                        <li><a class="nav-link" href="#">Bình Dương</a></li>
+                                                        <li><a class="nav-link" href="#">Đà Nẵng</a></li>
+                                                        <li><a class="nav-link" href="#">Đồng Nai</a></li>
+                                                        <li><a class="nav-link" href="#">Hải Dương</a></li>
+                                                        <li><a class="nav-link" href="#">Kiên Giang</a></li>
+                                                        <li><a class="nav-link" href="#">Long An</a></li>
+                                                        <li><a class="nav-link" href="#">Phú Thọ</a></li>
+                                                        <li><a class="nav-link" href="#">Quảng Ninh</a></li>
+                                                        <li><a class="nav-link" href="#">Tây Ninh</a></li>
+                                                        <li><a class="nav-link" href="#">Thanh Hóa</a></li>
+                                                        <li><a class="nav-link" href="#">Tiền Giang</a></li>
+                                                        <li><a class="nav-link" href="#">Vĩnh Phúc</a></li>
+                                                        <li><a class="nav-link" href="#">Bình Phước</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timKiem nav-item">
+                            <div class="input-group mt-1">
+                                <div class="input-group-text">
+                                    <img style="border: none;" class="img" src="../images/timkiem.png" alt="" width="20">
+                                </div>
+                                <input style="border: none;width: 270px;" class="form-control" type="search" name="search" id="searchSP" placeholder="Bạn cần tìm gì?">
+                            </div>
+                            <div id="searchSuggestions" class="search-suggestions">
+
+                            </div>
+                        </li>
+                        <li class="gioiThieu nav-item mt-1">
+                            <a class="nav-link" href="../html/introduce.html">
+                                <img src="../images/idea.png" alt="" width="25">
+                                <p class="d-inline" style="color:white;">Giới thiệu</p>
+                            </a>
+                        </li>
+                        <li class="goiMuaHang nav-item mt-1">
+                            <a class="nav-link" href="../html/contact.html">
+                                <img class="img" src="../images/dienthoai.png" alt="" width="25">
+                                <p class="d-inline" style="color:white;">Liên hệ</p>
+                            </a>
+                        </li>
+                        <li class="cuaHangGanNhat nav-item mt-1">
+                            <a class="nav-link" href="../html/sitemap.html">
+                                <img class="img" src="../images/sitemap (1).png" alt="" width="25">
+                                <p class="d-inline" style="color:white">Sitemap</p>
+                            </a>
+                        </li>
+                        <li class="traCuuDonHang nav-item mt-1">
+                            <a class="nav-link" href="../html/tracuudonhang.html">
+                                <img src="../images/xechohang.png" alt="" width="30">
+                                <p class="d-inline" style="color:white">Tra cứu đơn hàng</p>
+                            </a>
+                        </li>
+                        <li class="gioHang nav-item mt-1">
+                            <a class="nav-link" href="../html/giohang.html">
+                                <img src="../images/giohang.png" alt="" width="25">
+                                <b><span style="position: relative;left: -21px; top: 4px;color:white;font-size: 13px;" id="countSLSP">0</span></b>
+                                <p class="d-inline" style="color:white; padding-top: 20px;position: relative;top: 2px; left: -10px;">Giỏ hàng</p>
+                            </a>
+                            <script>
+                                updateCartItemCount();
+                            </script>
+                        </li>
+                        <li class="dangNhap nav-item mt-1">
+                            <button id="loginButton" class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#smember">
+                                <img class="img mb-2" src="../images/personlogin.png" alt="" width="20">
+                                <p style="color:white; position: relative; bottom: 10px;">Đăng nhập</p>
+                            </button>
+                            <div class="modal fade" id="smember" tabindex="-1" aria-labelledby="ModalSmember" aria-hidden="true">
+                                <div class="modal-dialog login">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <button style="float: right;" class="modal-close rounded-circle" type="button" data-bs-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <h4 style="text-align: center;font-size: 25px; color: #d70018; font-weight: bold;margin-left: 20px; ">Smember</h4>
+                                            <img src="../images/smember.png" alt="">
+                                            <div class="text">
+                                                <p style="text-align: center; font-weight: 700; font-size: 15px;">Vui lòng đăng nhập tài khoản Smember để xem ưu đãi và thanh toán dễ dàng hơn.</p>
+                                            </div>
+                                            <div class="group-login-btn">
+                                                <a href="../html/dangky.html" class="register-btn"> Đăng ký </a>
+                                                <a href="../html/dangnhap.html" class="login-btn">Đăng nhập</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="container mt-3 border" style="padding-top: 60px;">
+            <div class="row" class="productInformation">
+                <div class="row nav">
+                    <nav class="sticky_nav" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);padding-left: 60px;"
+                        aria-label="breadcrumb">
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a style="text-decoration: none; color: gray; font-size: 15px;" href="../html/index.html">
+                                    <img src="../images/home-icon.png" alt="Trang chủ" width="15" style="margin-top: -3px;"> Trang chủ</a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a style="text-decoration: none; color: gray; font-size: 15px;" href="../html/tainghe.html" id="loaisp"> Tai nghe</a>
+                            </li>
+                            <li style="color: gray;font-size: 14px; margin-top: 3px;" class="breadcrumb-item active" aria-current="page" id="breadcrumbItem"></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="notification" class="notification"></div>
+                <section class="row detail-product" style="padding-left: 50px;">
+                    <div class="box-header">
+                        <div class="box-product-name">
+                            <h1 style="font-size: 20px;" id="productName"></h1>
+                        </div>
+                        <div class="box-rating">
+                            <box-icon class="icon-is-active" name='star' type='solid' color='#f59e0b'></box-icon>
+                            <box-icon class="icon-is-active" name='star' type='solid' color='#f59e0b'></box-icon>
+                            <box-icon class="icon-is-active" name='star' type='solid' color='#f59e0b'></box-icon>
+                            <box-icon class="icon-is-active" name='star' type='solid' color='#f59e0b'></box-icon>
+                            <box-icon class="icon-is-active" name='star' type='solid' color='#f59e0b'></box-icon>
+                            <span style="top: 3px; position: relative;">&nbsp; 49 đánh giá</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="box-detail-product m-0">
+                        <div class="box-detail-product-left" style="float: left;">
+                            <div class="box-image mb-2" style="position: relative;">
+                                <div class="image-product">
+                                    <img id="product-image" src="" alt="">
+                                </div>
+                                <div class="wish-list" style="width: 30px; height: 30px;">
+                                    <box-icon class="wish-heart" name='heart' color='#d70018' style="width: 30px; height: 30px;"></box-icon>
+                                </div>
+                            </div>
+                            <div class="columns mt-1">
+                                <div class="thongTinSP" style="flex: none; width: 50%; float: left;">
+                                    <div class="thongTinSP-info">
+                                        <div class="info-title">
+                                            <p class="infoSP">Thông tin sản phẩm</p>
+                                        </div>
+                                        <div class="infor-content" style="font-size: 13px;">
+                                            <div class="infor-content-item">
+                                                <div class="icon me-2">
+                                                    <img src="../images/smartphone-call.png" alt="" width="23" height="20">
+                                                </div>
+                                                <p class="text">Mới, đầy đủ phụ kiện từ nhà sản xuất</p>
+                                            </div>
+                                            <div class="infor-content-item">
+                                                <div class="icon me-2">
+                                                    <img src="../images/box.png" alt="" width="23" height="20">
+                                                </div>
+                                                <p class="text">Tai nghe và hộp sạc, Cáp sạc Type-C, Sách hướng dẫn</p>
+                                            </div>
+                                            <div class="infor-content-item">
+                                                <div class="icon me-2">
+                                                    <img src="../images/shield.png" alt="" width="23" height="20">
+                                                </div>
+                                                <p class="text">Bảo hành 12 tháng chính hãng 1 đổi 1 trong 15 ngày nếu có lỗi phần cứng từ NSX.</p>
+                                            </div>
+                                            <div class="infor-content-item">
+                                                <div class="icon me-2">
+                                                    <img src="../images/vat.png" alt="" width="23" height="20">
+                                                </div>
+                                                <p class="text">Giá sản phẩm đã bao gồm VAT</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lienHeCuaHang" style="flex: none; width: 50%; float: right;">
+                                    <div class="lienHeCuaHang-stores" style="margin-bottom: 10px; margin-top: 0;overflow: hidden;">
+                                        <p style="font-size: 17px; position: relative; top: 10px; font-weight: 600;" class="stores-count">Có 5 cửa hàng có sản phẩm </p>
+                                        <div class="stores-address mb-1">
+                                            <div class="address" style="display: flex;">
+                                                <box-icon type='solid' name='phone' color="#D70018" style="width: 22px;height: 18px;"></box-icon>
+                                                <div style="font-weight: 600; font-size: 13px; color: #D70018" class="phone">0915020803</div>
+                                                <div>&nbsp;&#8722;</div>
+                                                <box-icon name='location-plus' type='solid' color='#028df5' style="width: 22px;height: 18px;"></box-icon>
+                                                <div style="font-weight: 600; font-size: 12px; color: #028df5;text-decoration: solid underline;" class="address"> 25/33/101 Bùi Quang Là, Phường 12, Quận Gò Vấp, Thành Phố Hồ Chí Minh</div>
+                                            </div>
+                                        </div>
+                                        <div class="stores-address mb-1">
+                                            <div class="address" style="display: flex;">
+                                                <box-icon type='solid' name='phone' color="#D70018" style="width: 22px;height: 18px;"></box-icon>
+                                                <div style="font-weight: 600; font-size: 13px; color: #D70018" class="phone">0915020803</div>
+                                                <div>&nbsp;&#8722;</div>
+                                                <box-icon name='location-plus' type='solid' color='#028df5' style="width: 22px;height: 18px;"></box-icon>
+                                                <div style="font-weight: 600; font-size: 12px; color: #028df5;text-decoration: solid underline;" class="address"> 25/33/101 Bùi Quang Là, Phường 12, Quận Gò Vấp, Thành Phố Hồ Chí Minh</div>
+                                            </div>
+                                        </div>
+                                        <div class="stores-address mb-1">
+                                            <div class="address" style="display: flex;">
+                                                <box-icon type='solid' name='phone' color="#D70018" style="width: 22px;height: 18px;"></box-icon>
+                                                <div style="font-weight: 600; font-size: 13px; color: #D70018" class="phone">0915020803</div>
+                                                <div>&nbsp;&#8722;</div>
+                                                <box-icon name='location-plus' type='solid' color='#028df5' style="width: 22px;height: 18px;"></box-icon>
+                                                <div style="font-weight: 600; font-size: 12px; color: #028df5;text-decoration: solid underline;" class="address"> 25/33/101 Bùi Quang Là, Phường 12, Quận Gò Vấp, Thành Phố Hồ Chí Minh</div>
+                                            </div>
+                                        </div>
+                                        <div class="stores-address mb-1">
+                                            <div class="address" style="display: flex;">
+                                                <box-icon type='solid' name='phone' color="#D70018" style="width: 22px;height: 18px;"></box-icon>
+                                                <div style="font-weight: 600; font-size: 13px; color: #D70018" class="phone">0915020803</div>
+                                                <div>&nbsp;&#8722;</div>
+                                                <box-icon name='location-plus' type='solid' color='#028df5' style="width: 22px;height: 18px;"></box-icon>
+                                                <div style="font-weight: 600; font-size: 12px; color: #028df5;text-decoration: solid underline;" class="address"> 25/33/101 Bùi Quang Là, Phường 12, Quận Gò Vấp, Thành Phố Hồ Chí Minh</div>
+                                            </div>
+                                        </div>
+                                        <div class="stores-address mb-1">
+                                            <div class="address" style="display: flex;">
+                                                <box-icon type='solid' name='phone' color="#D70018" style="width: 22px;height: 18px;"></box-icon>
+                                                <div style="font-weight: 600; font-size: 13px; color: #D70018" class="phone">0915020803</div>
+                                                <div>&nbsp;&#8722;</div>
+                                                <box-icon name='location-plus' type='solid' color='#028df5' style="width: 22px;height: 18px;"></box-icon>
+                                                <div style="font-weight: 600; font-size: 12px; color: #028df5;text-decoration: solid underline;" class="address"> 25/33/101 Bùi Quang Là, Phường 12, Quận Gò Vấp, Thành Phố Hồ Chí Minh</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="box-detail-product-right" style="float: right;">
+                            <div class="box-price">
+                                <div class="box-price-content">
+                                    <p class="price-giaMoi" id="giaMoi"></p>
+                                    <p class="price-giaCu" id=giaCu></p>
+                                </div>
+                            </div>
+                            <div class="box-khuyenMai">
+                                <div class="box-khuyenMai-header align-items-center p-2 ">
+                                    <div class="icon">
+                                        <box-icon name='gift' type='solid' color='#d70018'></box-icon>
+                                    </div>
+                                    <p>Khuyến mãi</p>
+                                </div>
+                                <div class="box-khuyenMai-content px-2 pt-2">
+                                    <div class="hotSale">
+                                        <div class="hotSale-text">
+                                            <p>Hotsale từ ngày <span style="color: rgb(255, 0, 0);">13/04 - 17/04</span> &nbsp;: Giảm giá chỉ còn
+                                                <span style="color: rgb(255, 0, 0);" id="giaMoi1"></span> (số lượng có hạn, áp dụng cùng ưu đãi SoundS).
+                                            </p>
+                                            <p>
+                                                Ngày cuối hotsale chỉ áp dụng thanh toán online 100% hoặc thanh toán trực tiếp tại cửa hàng.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-tacVu">
+                                <div class="box-order my-3">
+                                    <div style="gap: 10px; display: flex!important;justify-content: space-between!important;">
+                                        <button class="btn order-button " type="button" onclick="addToCart()">
+                                            <a class="nav-link" href="../html/giohang.html">
+                                                <strong>MUA NGAY</strong> <br>
+                                                <span>(Giao nhanh từ 2 giờ hoặc nhận tại cửa hàng)</span>
+                                            </a>
+                                        </button>
+                                        <button class="btn add-cart-button" type="button" style="text-align: center;" onclick="addToCart()">
+                                            <box-icon name='cart-add' color='#f52f32' style="width: 35px; height: 35px;"></box-icon> <br>
+                                            <span>Thêm vào giỏ</span>
+                                        </button>
+
+                                    </div>
+                                    <div style="margin: 0 auto 10px;display: flex;justify-content: space-between;">
+                                        <button class="btn traGop" type="button">
+                                            <strong class="text-white" style="font-size: 15px;line-height: 1.2;font-weight:700;">TRẢ GÓP 0%</strong>
+                                            <br>
+                                            <span style="font-size:14;font-weight:700;" class="text-white">Trả trước chỉ từ 62.000₫</span>
+                                        </button>
+                                    </div>
+                                    <div class="uuDaiThem my-3">
+                                        <div class="uuDaiThem-title">ƯU ĐÃI THÊM</div>
+                                        <div class="uuDaiThem-content" style="position: relative; right: 30px; width: 110%;">
+                                            <ul style="list-style-type: none;">
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Xem chính sách ưu đãi dành cho thành viên SoundS</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">
+                                                        <img style="position: relative; top: -3px;" src="../images/vibb_bank.webp" alt="" width="27" height="15">
+                                                    </a>
+                                                    <a class="nav-link" href="#">Giảm 1 triệu khi thanh toán bằng thẻ tín dụng VIB</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">
+                                                        <img style="position: relative; top: -3px;" src="../images/image_1009_1__1.webp" alt="" width="45" height="15">
+                                                    </a>
+                                                    <a class="nav-link" href="#">Giảm đến 500K khi thanh toán qua VNPAY-QR</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">
+                                                        <img style="position: relative; top: -3px;" src="../images/HSBC-Logo.webp" alt="" width="45" height="15">
+                                                    </a>
+                                                    <a class="nav-link" href="#">Nhận e-voucher đến 2.5 triệu khi mở thẻ tín dụng HSBC</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">
+                                                        <img style="position: relative; top: -3px;" src="../images/image_1010_1_.webp" alt="" width="15" height="15">
+                                                    </a>
+                                                    <a class="nav-link" href="#">Nhập mã CPSMM giảm 2% - Tối đa 200.000 đồng</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">
+                                                        <img style="position: relative; top: -3px;" src="../images/DUMT_ZV0.webp" alt="" width="45" height="15">
+                                                    </a>
+                                                    <a class="nav-link" href="#">Giảm thêm 5% tối đa 200.000đ khi thanh toán qua Kredivo</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">
+                                                        <img style="position: relative; top: -3px;" src="../images/image_904_1_.webp" alt="" width="35" height="15">
+                                                    </a>
+                                                    <a class="nav-link" href="#"> Nhập mã "SPPCPST4" Giảm ngay 50.000đ cho đơn từ 2.000.000 đồng</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Liên hệ B2B để được tư vấn giá tốt nhất cho khách hàng doanh nghiệp khi mua số lượng nhiều</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-content-product">
+                        <div class="block-content-product-left" style="width: 830px;">
+                            <div class="boxReview">
+                                <h2 class="title is-6" style="display: flex;">Đánh giá &amp; nhận xét&nbsp;
+                                    <p id="productName2"></p>
+                                </h2>
+                                <div class="boxReview-Review" style="display: flex;">
+                                    <div class="boxReview-score">
+                                        <p class="title is-4 m-0 p-0">5.0/5</p>
+                                        <div class="item-star">
+                                            <div class="star-container justify-content-center">
+                                                <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 20px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 20px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 20px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 20px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 20px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                            </div>
+                                        </div>
+                                        <div class="boxReview-score-count">
+                                            <strong style="color: #0c53b7;">3</strong> đánh giá
+                                        </div>
+                                    </div>
+                                    <div class="boxReview-star">
+                                        <div class="rating-level align-items-center">
+                                            <div class="star-count">
+                                                <span class="has-text-weight-bold">5</span>
+                                                <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 20px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                            </div>
+                                            <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar bg-danger" style="width: 100%"></div>
+                                            </div>
+                                            <span class="danhGia">3 đánh giá</span>
+                                        </div>
+                                        <div class="rating-level align-items-center">
+                                            <div class="star-count">
+                                                <span class="has-text-weight-bold">4</span>
+                                                <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 20px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                            </div>
+                                            <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar bg-danger" style="width: 0%"></div>
+                                            </div>
+                                            <span class="danhGia">0 đánh giá</span>
+                                        </div>
+                                        <div class="rating-level align-items-center">
+                                            <div class="star-count">
+                                                <span class="has-text-weight-bold">3</span>
+                                                <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 20px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                            </div>
+                                            <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar bg-danger" style="width: 0%"></div>
+                                            </div>
+                                            <span class="danhGia">0 đánh giá</span>
+                                        </div>
+                                        <div class="rating-level align-items-center">
+                                            <div class="star-count">
+                                                <span class="has-text-weight-bold">2</span>
+                                                <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 20px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                            </div>
+                                            <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar bg-danger" style="width: 0%"></div>
+                                            </div>
+                                            <span class="danhGia">0 đánh giá</span>
+                                        </div>
+                                        <div class="rating-level align-items-center">
+                                            <div class="star-count">
+                                                <span class="has-text-weight-bold">1</span>
+                                                <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 20px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                            </div>
+                                            <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar bg-danger" style="width: 0%"></div>
+                                            </div>
+                                            <span class="danhGia">0 đánh giá</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-experience-review">
+                                    <div class="title">Đánh giá theo trải nghiệm</div>
+                                    <div class="experience-item">
+                                        <div class="item-title" style="width: 170px;">Thời lượng pin </div>
+                                        <div class="item-review-result">
+                                            <div class="item-star">
+                                                <div class="star-container">
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 20px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 20px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 20px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 20px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 20px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                </div>
+                                            </div>
+                                            <div class="item-point">5/5</div>
+                                            <div class="item-review-count">(3)</div>
+                                        </div>
+                                    </div>
+                                    <div class="experience-item">
+                                        <div class="item-title" style="width: 170px;">Cảm giác đeo</div>
+                                        <div class="item-review-result">
+                                            <div class="item-star">
+                                                <div class="star-container">
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 20px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 20px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 20px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 20px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 20px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                </div>
+                                            </div>
+                                            <div class="item-point">5/5</div>
+                                            <div class="item-review-count">(3)</div>
+                                        </div>
+                                    </div>
+                                    <div class="experience-item">
+                                        <div class="item-title" style="width: 170px;">Chất âm </div>
+                                        <div class="item-review-result">
+                                            <div class="item-star">
+                                                <div class="star-container">
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 20px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 20px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 20px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 20px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 20px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                </div>
+                                            </div>
+                                            <div class="item-point">4.7/5</div>
+                                            <div class="item-review-count">(3)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="button-container-review">
+                                    <p class="has-text-centered my-2 subtitle is-6">Bạn đánh giá sao về sản phẩm này?</p>
+                                    <div class="has-text-centered" style="text-align: center;">
+                                        <button class="button has-text-white button_review">Đánh giá ngay
+                                        </button>
+                                    </div>
+                                </div>
+                                <div id="review" class="box-review-comment">
+                                    <div class="boxReview-comment-item">
+                                        <div class="boxReview-comment-item-title" style="display: flex;">
+                                            <div style="display: flex;align-items: center;">
+                                                <p class="name-letter">V</p>
+                                                <div class="block-info">
+                                                    <div class="block-info-name" style="display: flex;">
+                                                        <span class="name me-2">Trần Long Vũ</span>
+                                                        <p class="date-time" style="display: flex;">
+                                                            <box-icon class="me-1" name='time' style="width: 16px;"></box-icon>
+                                                            9/4/2024 23:18
+                                                        </p>
+                                                    </div>
+                                                    <div class="bought">
+                                                        <div class="tick-icon" style="display: flex; position: relative; top: -20px;">
+                                                            <box-icon class="me-1" name='check-circle' color='#229a16' style="width: 15px;height: 18px;"></box-icon>
+                                                            Đã mua tại SoundS
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="boxReview-comment-item-review">
+                                            <div class="item-review-rating">
+                                                <div class="item-review-rating-star">
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 18px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 18px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 18px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 18px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 18px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                </div>
+                                                <div class="item-review-rating_item-attribute">
+                                                    Thời lượng pin Cực khỏe
+                                                </div>
+                                                <div class="item-review-rating_item-attribute">
+                                                    Cảm giác đeo Rất thoải mái
+                                                </div>
+                                                <div class="item-review-rating_item-attribute">
+                                                    Chất âm Rất hay
+                                                </div>
+                                            </div>
+                                            <div class="item-review-comment">
+                                                <div class="comment-content" style="width: 100%;">
+                                                    <p>
+                                                        Nghe nhạc chơi games cực chất.mn nên mua.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="boxReview-comment-item">
+                                        <div class="boxReview-comment-item-title" style="display: flex;">
+                                            <div style="display: flex;align-items: center;">
+                                                <p class="name-letter">N</p>
+                                                <div class="block-info">
+                                                    <div class="block-info-name" style="display: flex;">
+                                                        <span class="name me-2">Hồ Quang Nhân</span>
+                                                        <p class="date-time" style="display: flex;">
+                                                            <box-icon class="me-1" name='time' style="width: 16px;"></box-icon>
+                                                            9/4/2024 23:18
+                                                        </p>
+                                                    </div>
+                                                    <div class="bought">
+                                                        <div class="tick-icon" style="display: flex; position: relative; top: -20px;">
+                                                            <box-icon class="me-1" name='check-circle' color='#229a16' style="width: 15px;height: 18px;"></box-icon>
+                                                            Đã mua tại SoundS
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="boxReview-comment-item-review">
+                                            <div class="item-review-rating">
+                                                <div class="item-review-rating-star">
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 18px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 18px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 18px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 18px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 18px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                </div>
+                                                <div class="item-review-rating_item-attribute">
+                                                    Thời lượng pin Cực khỏe
+                                                </div>
+                                                <div class="item-review-rating_item-attribute">
+                                                    Cảm giác đeo Rất thoải mái
+                                                </div>
+                                                <div class="item-review-rating_item-attribute">
+                                                    Chất âm Rất hay
+                                                </div>
+                                            </div>
+                                            <div class="item-review-comment">
+                                                <div class="comment-content" style="width: 100%;">
+                                                    <p>
+                                                        Giao hàng rất nhanh nha.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="boxReview-comment-item">
+                                        <div class="boxReview-comment-item-title" style="display: flex;">
+                                            <div style="display: flex;align-items: center;">
+                                                <p class="name-letter">V</p>
+                                                <div class="block-info">
+                                                    <div class="block-info-name" style="display: flex;">
+                                                        <span class="name me-2">Lê Nguyễn Quang Vinh</span>
+                                                        <p class="date-time" style="display: flex;">
+                                                            <box-icon class="me-1" name='time' style="width: 16px;"></box-icon>
+                                                            13/4/2024 13:18
+                                                        </p>
+                                                    </div>
+                                                    <div class="bought">
+                                                        <div class="tick-icon" style="display: flex; position: relative; top: -20px;">
+                                                            <box-icon class="me-1" name='check-circle' color='#229a16' style="width: 15px;height: 18px;"></box-icon>
+                                                            Đã mua tại SoundS
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="boxReview-comment-item-review">
+                                            <div class="item-review-rating">
+                                                <div class="item-review-rating-star">
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 18px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 18px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 18px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 18px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                    <box-icon class="icon-star is-active" style="fill: #f59e0b;width: 18px; padding-right: 3px;" name='star' type='solid'></box-icon>
+                                                </div>
+                                                <div class="item-review-rating_item-attribute">
+                                                    Thời lượng pin Cực khỏe
+                                                </div>
+                                                <div class="item-review-rating_item-attribute">
+                                                    Cảm giác đeo Rất thoải mái
+                                                </div>
+                                                <div class="item-review-rating_item-attribute">
+                                                    Chất âm Rất hay
+                                                </div>
+                                            </div>
+                                            <div class="item-review-comment">
+                                                <div class="comment-content" style="width: 100%;">
+                                                    <p>
+                                                        Đã mua 3 cái vừa xài vừa tặng ng thân, nghe khá ổn, pin trâu, có app hổ trợ, tiếc là ko xem đc pin case
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-content-product-right">
+                            <div>
+                                <div class="thongSoKyThuat mb-3 ml-3 px-3 pt-3 pb-1">
+                                    <div class="thongSoKyThuat-title">
+                                        <h2 class="title mb-3">Thông số kỹ thuật</h2>
+                                    </div>
+                                    <ul class="thongSoKyThuat-content">
+                                        <li class="thongSoKyThuat-content-item">
+                                            <p style="width: 40%;">Thời lượng pin</p>
+                                            <div class="thongso" style="width: 50%;">Thiết bị: Dùng 10 giờ <br> Hộp sạc: 30 giờ</div>
+                                        </li>
+                                        <li class="thongSoKyThuat-content-item">
+                                            <p style="width: 40%;">Chống nước</p>
+                                            <div class="thongso" style="width: 50%;">IPX5</div>
+                                        </li>
+                                        <li class="thongSoKyThuat-content-item">
+                                            <p style="width: 40%;">Micro</p>
+                                            <div class="thongso" style="width: 50%;">Có<br>2 mic</div>
+                                        </li>
+                                        <li class="thongSoKyThuat-content-item">
+                                            <p style="width: 40%;">Tương thích</p>
+                                            <div class="thongso" style="width: 50%;">Các thiết bị hỗ trợ<br>Bluetooth</div>
+                                        </li>
+                                        <li class="thongSoKyThuat-content-item">
+                                            <p style="width: 40%;">Kích thước driver</p>
+                                            <div class="thongso" style="width: 50%;">10mm</div>
+                                        </li>
+                                        <li class="thongSoKyThuat-content-item">
+                                            <p style="width: 40%;">Hãng sản xuất</p>
+                                            <div class="thongso" style="width: 50%;">Anker</div>
+                                        </li>
+                                        <li class="thongSoKyThuat-content-item">
+                                            <p style="width: 40%;">Phạm vi kết nối</p>
+                                            <div class="thongso" style="width: 50%;">10 m</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="row footer">
+                    <div class="footer-top">
+                        <div class="footer-container">
+                            <div class="columns" style="display: flex;">
+                                <div class="col-md-3 col-3">
+                                    <div class="tongDai mb-3">
+                                        <div class="tongDai-title">
+                                            <p class="mb-3 title">Tổng đài hỗ trợ miễn phí</p>
+                                        </div>
+                                        <div class="call mb-3">
+                                            <ul class="list-link">
+                                                <li class="link">
+                                                    <div>
+                                                        Gọi mua hàng
+                                                        <a href="tel:0915020803"><strong>0915020803</strong></a> (7h30 - 22h00)
+                                                    </div>
+                                                </li>
+                                                <li class="link">
+                                                    <div>
+                                                        Gọi khiếu nại
+                                                        <a href="tel:0915020803"><strong>0915020803</strong></a> (8h00 - 21h30)
+                                                    </div>
+                                                </li>
+                                                <li class="link">
+                                                    <div>
+                                                        Gọi bảo hành
+                                                        <a href="tel:0915020803"><strong>0915020803</strong></a> (8h00 - 21h00)
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="thanhToan">
+                                        <div class="thanhToan-title">
+                                            <p class="mb-3 title">Phương thức thanh toán</p>
+                                        </div>
+                                        <div class="thanhToan-content">
+                                            <div class="list-link">
+                                                <div class="link border rounded">
+                                                    <a href="#">
+                                                        <img src="../images/apple-pay-og.png" alt="Apple Pay">
+                                                    </a>
+                                                </div>
+                                                <div class="link border rounded">
+                                                    <a href="#">
+                                                        <img src="../images/vnpay-logo.png" alt="Vnpay">
+                                                    </a>
+                                                </div>
+                                                <div class="link border rounded">
+                                                    <a href="#">
+                                                        <img src="../images/momo_1.png" alt="MoMo">
+                                                    </a>
+                                                </div>
+                                                <div class="link border rounded">
+                                                    <a href="#">
+                                                        <img src="../images/onepay-logo.webp" alt="Onepay">
+                                                    </a>
+                                                </div>
+                                                <div class="link border rounded">
+                                                    <a href="#">
+                                                        <img src="../images/mpos-logo.png" alt="Mpos">
+                                                    </a>
+                                                </div>
+                                                <div class="link border rounded">
+                                                    <a href="#">
+                                                        <img src="../images/kredivo-logo.png" alt="Kredivo">
+                                                    </a>
+                                                </div>
+                                                <div class="link border rounded">
+                                                    <a href="#">
+                                                        <img src="../images/zalopay-logo.png" alt="Zalopay">
+                                                    </a>
+                                                </div>
+                                                <div class="link border rounded">
+                                                    <a href="#">
+                                                        <img src="../images/alepay-logo.png" alt="Alepay">
+                                                    </a>
+                                                </div>
+                                                <div class="link border rounded">
+                                                    <a href="#">
+                                                        <img src="../images/fundiin.png" alt="Fundiin">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dangKyKhuyenMai-form">
+                                        <p style="padding: 0; margin: 0;font-size: 16px;" class="dangKyKhuyenMai-title">ĐĂNG KÝ NHẬN TIN KHUYẾN MÃI</p>
+                                        <p style="padding: 0; margin: 0;color: #d70018;" class="dangKyKhuyenMai-voucher">(*) Nhận ngay voucher 10%</p>
+                                        <p style="padding: 0; margin: 0; font-size: 15px;" class="dangKyKhuyenMai-tip">*Voucher sẽ được gửi sau 24h, chỉ áp dụng cho khách hàng mới</p>
+                                        <div class="control mb-3 mt-2">
+                                            <input class="form-control" id="inputEmail" type="text" name="EMAIL" autocomplete="off" placeholder="Email *" required="required" value="" class="input dangKyKhuyenMai-form-email">
+                                        </div>
+                                        <div class="control mb-3">
+                                            <input class="form-control" id="inputPhone" type="tel" name="SMS" autocomplete="off" maxlength="10" placeholder="Số điện thoại" value="" class="input dangKyKhuyenMai-form-phone">
+                                        </div>
+                                        <div class="checkbox mb-3 disabled">
+                                            <div class="dangKyKhuyenMai-form-label-rule">
+                                                <input id="OPT_IN" checked="checked" disabled="disabled" type="checkbox" value="1" name="OPT_IN" class="dangKyKhuyenMai-form-rule">
+                                                <a href="#">Tôi đồng ý với điều khoản của SoundS</a>
+                                            </div>
+                                        </div>
+                                        <div class="group-btn">
+                                            <button class="dangKyKhuyenMai-form-submit btn">ĐĂNG KÝ NGAY</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <div class="title-chinhsach">
+                                        <p class="mb-3 title">Thông tin và chính sách</p>
+                                    </div>
+                                    <div class="chinhsach">
+                                        <ul class="list-link">
+                                            <li class="link"><a href="#">Mua hàng và thanh toán Online</a></li>
+                                            <li class="link"><a href="#">Mua hàng trả góp Online</a></li>
+                                            <li class="link"><a href="#">Mua hàng trả góp bằng thẻ tín dụng</a></li>
+                                            <li class="link"><a href="#">Chính sách giao hàng</a></li>
+                                            <li class="link"><a href="#">Tra điểm SoundS</a></li>
+                                            <li class="link"><a href="#">Xem ưu đãi SoundS</a></li>
+                                            <li class="link"><a href="#">Tra thông tin bảo hành</a></li>
+                                            <li class="link"><a href="#">Tra cứu hoá đơn điện tử</a></li>
+                                            <li class="link"><a href="#">Thông tin hoá đơn mua hàng</a></li>
+                                            <li class="link"><a href="#">Trung tâm bảo hành chính hãng</a></li>
+                                            <li class="link"><a href="#">Quy định về việc sao lưu dữ liệu</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <div class="title-dichvu">
+                                        <p class="mb-3 title">Dịch vụ và thông tin khác</p>
+                                    </div>
+                                    <div class="dichvu">
+                                        <ul class="list-link">
+                                            <li class="link"><a href="#">Khách hàng doanh nghiệp (B2B)</a></li>
+                                            <li class="link"><a href="#">Ưu đãi thanh toán</a></li>
+                                            <li class="link"><a href="#">Quy chế hoạt động</a></li>
+                                            <li class="link"><a href="#">Chính sách bảo mật thông tin cá nhân</a></li>
+                                            <li class="link"><a href="#">Chính sách Bảo hành</a></li>
+                                            <li class="link"><a href="#">Liên hệ hợp tác kinh doanh</a></li>
+                                            <li class="link"><a href="#">Tuyển dụng</a></li>
+                                            <li class="link"><a href="#">Dịch vụ bảo hành điện thoại</a></li>
+                                            <li class="link"><a href="#">Dịch vụ bảo hành mở rộng</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <div class="title-ketnoi">
+                                        <p class="mb-3 title">Kết nối với SoundS</p>
+                                    </div>
+                                    <div class="logo-ketnoi" style="display: flex;">
+                                        <div class="social-logo">
+                                            <a href="#">
+                                                <img src="../images/sounds-youtube.png" alt="SoundS Youtube Chanel">
+                                            </a>
+                                        </div>
+                                        <div class="social-logo">
+                                            <a href="#">
+                                                <img src="../images/sounds-facebook.png" alt="SoundS Fanpage">
+                                            </a>
+                                        </div>
+                                        <div class="social-logo">
+                                            <a href="#">
+                                                <img src="../images/sounds-instagram.png" alt="SoundS Instagram">
+                                            </a>
+                                        </div>
+                                        <div class="social-logo">
+                                            <a href="#">
+                                                <img src="../images/sounds-tiktok.png" alt="SoundS Tiktok">
+                                            </a>
+                                        </div>
+                                        <div class="social-logo">
+                                            <a href="#">
+                                                <img src="../images/sounds-zalo.png" alt="SoundS Zalo">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="title-thanhvien">
+                                        <p class="mb-3 title">Website thành viên</p>
+                                    </div>
+                                    <div class="hethong">
+                                        <div class="member">
+                                            <p class="member-title">Trung tâm bảo hành uỷ quyền Apple</p>
+                                            <a class="link" href="#">
+                                                <img src="../images/Logo_CareS_1.png" alt="Trung tâm bảo hành uỷ quyền Apple">
+                                            </a>
+                                        </div>
+                                        <div class="member">
+                                            <p class="member-title">Trang thông tin công nghệ mới nhất</p>
+                                            <a class="link" href="#">
+                                                <img src="../images/sforum.webp" alt="Trang thông tin công nghệ mới nhất">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <div class="footer-container">
+                            <div class="content-information">
+                                <p>
+                                    Công ty TNHH Thương Mại và Dịch Vụ Kỹ Thuật DIỆU PHÚC - GPĐKKD: 0316172372 cấp tại Sở KH &amp; ĐT TP. HCM. Địa chỉ văn phòng: 350-352 Võ Văn Kiệt, Phường Cô Giang, Quận 1, Thành phố Hồ Chí Minh, Việt Nam. Điện thoại: 028.7108.9666.
+                                </p>
+                            </div>
+                            <div class="content-information2">
+                                <a href="#">
+                                    <img src="../images/logoSaleNoti.webp" alt="Đã thông báo">
+                                </a>
+                                <a href="#">
+                                    <img src="../images/dmca_copyright_protected150c.png" alt="DMCA.com Protection Status" width="96" height="20">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
