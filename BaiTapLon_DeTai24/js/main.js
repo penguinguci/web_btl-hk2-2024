@@ -27,6 +27,14 @@ function registerAccount() {
         return;
     }
 
+    // Kiểm tra định dạng họ tên có dấu và viết hoa chữ cái đầu
+    var regName = /^[A-Z][a-z]+(\s[A-Z][a-z]+)+$/;
+    if (hoTen && !regName.test(hoTen)) {
+        document.getElementById('registerMessage').textContent = 'Họ tên không hợp lệ';
+        document.getElementById('registerMessage').style.display = 'block';
+        return;
+    }
+
     // kiểm tra định dạng email 
     var regEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     if (email && !regEmail.test(email)) {
