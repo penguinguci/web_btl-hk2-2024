@@ -28,7 +28,7 @@ function registerAccount() {
     }
 
     // Kiểm tra định dạng họ tên có dấu và viết hoa chữ cái đầu
-    var regName = /^[A-Z][a-z]+(\s[A-Z][a-z]+)+$/;
+    var regName = /^\p{Lu}\p{Ll}+(\s\p{Lu}\p{Ll}+)*$/u;
     if (hoTen && !regName.test(hoTen)) {
         document.getElementById('registerMessage').textContent = 'Họ tên không hợp lệ';
         document.getElementById('registerMessage').style.display = 'block';
